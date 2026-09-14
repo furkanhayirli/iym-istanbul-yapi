@@ -502,15 +502,17 @@
           <!--
             VİDEO EKLEME REHBERİ
             Seçenek A (önerilen – kendi dosyanız): Instagram'dan indirdiğiniz reels videolarını sitenin yanına
-              videos/reel-1.mp4, videos/reel-2.mp4 ... olarak koyun; isterseniz kapak görseli için videos/reel-1.jpg ekleyin.
+              videos/reel-1.mp4, videos/reel-2.mp4 ... olarak koyun.
               Dosya bulunamazsa kart otomatik olarak "Video yakında" yer tutucusuna döner.
+              Videolar sessiz ve kontrolsüz oynar: kart ekrana girince başlar, çıkınca duraklar (bkz. reelObserver).
+              Kapak görseli kullanılmaz; src sonundaki #t=0.1 sayesinde ilk kare kapak olarak görünür.
             Seçenek B (Instagram gömme): Aşağıdaki <div class="reel"> bloğu yerine Instagram'ın "Göm" kodunu yapıştırın:
               <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/XXXXXXXX/" data-instgrm-version="14"></blockquote>
               ve sayfanın sonuna bir kez <script async src="https://www.instagram.com/embed.js"></script> ekleyin.
           -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll fade-up delay-100">
             <div class="reel shadow-2xl ring-1 ring-white/10">
-              <video src="videos/reel-1.mp4" poster="videos/reel-1.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span>
@@ -518,7 +520,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10 md:translate-y-8">
-              <video src="videos/reel-2.mp4" poster="videos/reel-2.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span>
@@ -526,7 +528,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10">
-              <video src="videos/reel-3.mp4" poster="videos/reel-3.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Depo &amp; stok</span>
@@ -534,7 +536,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10 md:translate-y-8">
-              <video src="videos/reel-4.mp4" poster="videos/reel-4.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span>
@@ -1069,14 +1071,14 @@
         <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2 reveal-on-scroll fade-up"><i data-lucide="clapperboard" class="w-5 h-5 text-gold-500"></i> Videolar</h2>
         <!-- Video ekleme rehberi için ana sayfadaki "Sahadan videolar" bölümündeki yoruma bakın. Dosyalar: videos/reel-1.mp4 … videos/reel-8.mp4 -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 reveal-on-scroll fade-up delay-100">
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-1.mp4" poster="videos/reel-1.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-2.mp4" poster="videos/reel-2.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-3.mp4" poster="videos/reel-3.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Depo &amp; stok</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-4.mp4" poster="videos/reel-4.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-5.mp4" poster="videos/reel-5.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Forklift ile indirme</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-6.mp4" poster="videos/reel-6.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Gazbeton sevkiyatı</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-7.mp4" poster="videos/reel-7.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Boya uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-8.mp4" poster="videos/reel-8.jpg" controls playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Küçükköy şube</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Depo &amp; stok</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-5.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Forklift ile indirme</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-6.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Gazbeton sevkiyatı</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-7.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Boya uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-8.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Küçükköy şube</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
         </div>
 
         <!-- Fotoğraflar -->
@@ -1590,6 +1592,20 @@
     function markReelMissing(video) {
       video.closest('.reel')?.classList.add('reel--missing');
     }
+
+    // Kart ekrana girince videoyu başlat, çıkınca duraklat (kontrol çubuğu yok)
+    const reelObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {}); // tarayıcı engellerse sessizce geç
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.reel video').forEach(v => reelObserver.observe(v));
 
     // ---------- Formlar ----------
     function setInvalid(el, invalid) {
