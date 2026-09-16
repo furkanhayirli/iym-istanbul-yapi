@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İYM İstanbul Yapı Malzemeleri | Alibeyköy, Eyüpsultan – Gazbeton, Tuğla, Alçı, Yalıtım, Yapı Kimyasalları, Çimento, Boya</title>
-  <meta name="description" content="İYM İstanbul Yapı Malzemeleri Mimarlık San. Tic. Ltd. Şti., Alibeyköy / Eyüpsultan'da yapı malzemeleri satış ve uygulama merkezi. Ytong gazbeton, Kilsan tuğla, ABS ve Dalsan alçı, İzocam, Austrotherm, Onduline, Baumit, Fox yapı kimyasalları, Traçim ve Akçansa çimento, Filli Boya &amp; Fawori. Temelden çatıya tek tedarik noktası, şantiyeye teslimat. Google'da 4,9 puan.">
+  <meta name="description" content="İYM İstanbul Yapı Malzemeleri Mimarlık San. Tic. Ltd. Şti., Alibeyköy / Eyüpsultan'da yapı malzemeleri satış ve uygulama merkezi. Ytong gazbeton, Kilsan tuğla, Dalsan ve Knauf alçı, İzocam, Onduline, Baumit, Kalekim ve Weber yapı kimyasalları, Nippon Paint, Filli Boya, Fawori ve Marshall boya. Temelden çatıya tek adreste çözüm ortağınız; satış ve uygulama, şantiyeye teslimat. Google'da 4,9 puan.">
   <meta name="theme-color" content="#0f1a2b">
   <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -97,7 +97,7 @@
 
     /* Marka şeridi kayan animasyon */
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-track { animation: marquee 90s linear infinite; }
+    .marquee-track { animation: marquee 150s linear infinite; }
     .marquee:hover .marquee-track { animation-play-state: paused; }
     @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
@@ -230,18 +230,21 @@
           </span>
         </a>
 
-        <nav class="hidden lg:flex items-stretch self-stretch" aria-label="Ana menü">
-          <a href="#anasayfa"   data-nav="anasayfa"   onclick="return navigateTo('anasayfa')"   class="nav-link">Ana Sayfa</a>
-          <a href="#hakkimizda" data-nav="hakkimizda" onclick="return navigateTo('hakkimizda')" class="nav-link">Hakkımızda</a>
-          <a href="#urunler"    data-nav="urunler"    onclick="return navigateTo('urunler')"    class="nav-link">Ürünler</a>
-          <a href="#hizmetler"  data-nav="hizmetler"  onclick="return navigateTo('hizmetler')"  class="nav-link">Hizmetler</a>
-          <a href="#galeri"     data-nav="galeri"     onclick="return navigateTo('galeri')"     class="nav-link">Galeri</a>
-          <a href="#iletisim"   data-nav="iletisim"   onclick="return navigateTo('iletisim')"   class="nav-link">İletişim</a>
+        <!-- 8 menü öğesi lg (1024px) genişliğe sığmadığı için masaüstü menü xl'den itibaren gösterilir -->
+        <nav class="hidden xl:flex items-stretch self-stretch" aria-label="Ana menü">
+          <a href="#anasayfa"    data-nav="anasayfa"    onclick="return navigateTo('anasayfa')"    class="nav-link">Ana Sayfa</a>
+          <a href="#hakkimizda"  data-nav="hakkimizda"  onclick="return navigateTo('hakkimizda')"  class="nav-link">Hakkımızda</a>
+          <a href="#kurumsal"    data-nav="kurumsal"    onclick="return navigateTo('kurumsal')"    class="nav-link">Kurumsal</a>
+          <a href="#urunler"     data-nav="urunler"     onclick="return navigateTo('urunler')"     class="nav-link">Ürünler</a>
+          <a href="#hizmetler"   data-nav="hizmetler"   onclick="return navigateTo('hizmetler')"   class="nav-link">Hizmetler</a>
+          <a href="#referanslar" data-nav="referanslar" onclick="return navigateTo('referanslar')" class="nav-link">Referanslar</a>
+          <a href="#galeri"      data-nav="galeri"      onclick="return navigateTo('galeri')"      class="nav-link">Galeri</a>
+          <a href="#iletisim"    data-nav="iletisim"    onclick="return navigateTo('iletisim')"    class="nav-link">İletişim</a>
         </nav>
 
         <div class="flex items-center gap-3 shrink-0">
           <a href="#teklif" onclick="return navigateTo('teklif')" class="hidden sm:inline-flex items-center h-11 px-6 rounded-sm bg-navy-900 hover:bg-navy-800 text-white text-[12.5px] font-bold uppercase tracking-[0.12em] transition-colors">Teklif Al</a>
-          <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="lg:hidden p-2 -mr-2 text-navy-900" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+          <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="xl:hidden p-2 -mr-2 text-navy-900" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
             <i data-lucide="menu" class="w-7 h-7"></i>
           </button>
         </div>
@@ -250,7 +253,7 @@
   </header>
 
   <!-- Mobil çekmece menü -->
-  <div id="mobile-menu" class="fixed inset-0 z-[70] hidden lg:hidden" aria-hidden="true">
+  <div id="mobile-menu" class="fixed inset-0 z-[70] hidden xl:hidden" aria-hidden="true">
     <div id="mobile-menu-backdrop" class="absolute inset-0 bg-navy-950/60 opacity-0 transition-opacity duration-300" onclick="closeMobileMenu()"></div>
     <div id="mobile-menu-panel" class="absolute right-0 top-0 h-full w-[86%] max-w-sm bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out" role="dialog" aria-modal="true" aria-label="Menü">
       <div class="flex items-center justify-between pl-5 pr-3 h-[76px] border-b border-stone-200 shrink-0">
@@ -266,8 +269,10 @@
       <nav class="flex-1 overflow-y-auto py-2" aria-label="Mobil menü">
         <a href="#anasayfa"   data-nav="anasayfa"   onclick="return navigateTo('anasayfa')"   class="drawer-link">Ana Sayfa<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#hakkimizda" data-nav="hakkimizda" onclick="return navigateTo('hakkimizda')" class="drawer-link">Hakkımızda<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
+        <a href="#kurumsal"   data-nav="kurumsal"   onclick="return navigateTo('kurumsal')"   class="drawer-link">Kurumsal<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#urunler"    data-nav="urunler"    onclick="return navigateTo('urunler')"    class="drawer-link">Ürünler<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#hizmetler"  data-nav="hizmetler"  onclick="return navigateTo('hizmetler')"  class="drawer-link">Hizmetler<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
+        <a href="#referanslar" data-nav="referanslar" onclick="return navigateTo('referanslar')" class="drawer-link">Referanslar<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#galeri"     data-nav="galeri"     onclick="return navigateTo('galeri')"     class="drawer-link">Galeri<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#sss"        data-nav="sss"        onclick="return navigateTo('sss')"        class="drawer-link">Sık Sorulan Sorular<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
         <a href="#iletisim"   data-nav="iletisim"   onclick="return navigateTo('iletisim')"   class="drawer-link">İletişim<i data-lucide="chevron-right" class="w-4 h-4 text-stone-400"></i></a>
@@ -309,14 +314,14 @@
             </a>
             <h1 class="reveal-on-scroll fade-up delay-100 is-visible font-display font-extrabold text-white tracking-tight leading-[1.05] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
               Temelden çatıya,<br>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500">tek adresten</span> yapı malzemesi.
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500">tek adreste</span> çözüm ortağınız.
             </h1>
             <p class="reveal-on-scroll fade-up delay-200 is-visible text-lg md:text-xl text-stone-300 max-w-2xl mb-9 leading-relaxed">
-              Alibeyköy / Eyüpsultan'daki satış ve uygulama merkezimizden gazbeton, tuğla, alçı, yalıtım, çatı, yapı kimyasalları, çimento ve boyayı kendi araçlarımızla şantiyenize teslim ediyoruz. Yapının güçlü tedarikçisi.
+              Vizyonumuzla sektör standartlarına yön veriyoruz.
             </p>
             <div class="reveal-on-scroll fade-up delay-300 is-visible flex flex-col sm:flex-row sm:flex-wrap gap-3">
-              <a href="#teklif" onclick="return navigateTo('teklif')" class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold shadow-lg shadow-gold-500/20 transition-all hover:-translate-y-0.5">
-                Fiyat Teklifi Al <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <a href="katalog/IYM-2026-Urun-Katalogu.pdf" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold shadow-lg shadow-gold-500/20 transition-all hover:-translate-y-0.5">
+                <i data-lucide="book-open" class="w-4 h-4"></i> 2026 Ürün Kataloğu
               </a>
               <a href="https://wa.me/905522070804?text=Merhaba%2C%20yap%C4%B1%20malzemesi%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2.5 whitespace-nowrap px-7 py-3.5 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold backdrop-blur-sm transition-all hover:-translate-y-0.5">
                 <svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp'tan Yazın
@@ -353,47 +358,75 @@
       <div class="bg-white border-y border-stone-200 py-6 overflow-hidden marquee" aria-label="Çalıştığımız markalar">
         <p class="text-center text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400 mb-4">Yetkili satış noktası olduğumuz ve çalıştığımız markalar</p>
         <div class="flex marquee-track w-max gap-14 px-7">
-          <!-- Liste 2 kez tekrarlanır (kesintisiz kayma için). Markalar 2026 ürün kataloğundan. -->
+          <!-- Liste 2 kez tekrarlanır (kesintisiz kayma için). 34 marka, işletme sahibinin listesinden. -->
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ytong</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Kilsan</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Teknobims</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">ABS Alçı</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Dalsan</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Onduline</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Baumit</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">İzocam</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ravago</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fox</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Weber</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tekno</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Knauf</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Entegre</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Austrotherm</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Birpor EPS</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Traçim</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Akçansa</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Nippon Paint</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Filli Boya</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Dalmaçyalı</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fawori</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tempo</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Optimix</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Expert</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Marshall</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Kalekim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Weber</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ravago</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Adakim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Atışkan Alçı</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">ABS Alçı</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Lion</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Newkim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">İsonem</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Beşer</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Derya</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Bonus</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tekno</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Adaçim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Çimentaş</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">STT</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fixa</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ytong</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Kilsan</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Teknobims</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">ABS Alçı</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Dalsan</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Onduline</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Baumit</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">İzocam</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ravago</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fox</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Weber</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tekno</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Knauf</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Entegre</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Austrotherm</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Birpor EPS</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Traçim</span>
-          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Akçansa</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Nippon Paint</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Filli Boya</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Dalmaçyalı</span>
           <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fawori</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tempo</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Optimix</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Expert</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Marshall</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Kalekim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Weber</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Ravago</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Adakim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Atışkan Alçı</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">ABS Alçı</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Lion</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Newkim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">İsonem</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Beşer</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Derya</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Bonus</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Tekno</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Adaçim</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Çimentaş</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">STT</span>
+          <span class="font-display font-extrabold text-2xl text-stone-800 whitespace-nowrap">Fixa</span>
         </div>
       </div>
 
@@ -409,7 +442,7 @@
             <div class="reveal-on-scroll fade-up delay-100 p-7 rounded-2xl border border-stone-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:border-gold-300 transition-all duration-300 group">
               <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-navy-900 text-gold-400 group-hover:scale-110 transition-transform"><i data-lucide="layers" class="w-6 h-6"></i></div>
               <h3 class="font-display text-lg font-bold text-navy-900 mb-2">Geniş ürün yelpazesi</h3>
-              <p class="text-sm text-stone-600 leading-relaxed">Temelden çatıya: gazbeton, tuğla, alçı, yalıtım, çatı, yapı kimyasalları, çimento ve boya tek çatı altında. Sektörün 18'den fazla lider markası.</p>
+              <p class="text-sm text-stone-600 leading-relaxed">Temelden çatıya: gazbeton, tuğla, alçı, yalıtım, çatı, yapı kimyasalları, çimento ve boya tek çatı altında. Sektörün 30'dan fazla lider markası.</p>
             </div>
             <div class="reveal-on-scroll fade-up delay-200 p-7 rounded-2xl border border-stone-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:border-gold-300 transition-all duration-300 group">
               <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-navy-900 text-gold-400 group-hover:scale-110 transition-transform"><i data-lucide="truck" class="w-6 h-6"></i></div>
@@ -430,101 +463,51 @@
         </div>
       </div>
 
-      <!-- Ürün grupları (özet) -->
+      <!-- Faaliyet alanlarımız (uygulama hizmetleri; liste işletme sahibinin föyünden) -->
       <div class="bg-white py-24 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-on-scroll fade-up">
             <div>
-              <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-600 mb-3">Ürün Grupları</p>
-              <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-navy-900 title-underline">Temelden çatıya ihtiyacınız olan her şey</h2>
+              <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-600 mb-3">Faaliyet Alanlarımız</p>
+              <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-navy-900 title-underline">Malzeme satışından uygulamaya</h2>
             </div>
             <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-2 font-semibold text-navy-900 hover:text-gold-600 transition-colors group">
-              Tüm ürünleri gör <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              Ürün gruplarını gör <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
             </a>
           </div>
-          <!-- 8 ürün grubu 2026 kataloğundan (sayfa 4) + boya -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-100 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1604290443024-3b64d3f0a9b4?w=900&q=70&auto=format&fit=crop" alt="Gazbeton blokları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="reveal-on-scroll fade-up delay-100 p-8 rounded-2xl border border-stone-200 bg-[#f8f7f4]">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0"><i data-lucide="building-2" class="w-5 h-5"></i></div>
+                <h3 class="font-display text-xl font-bold text-navy-900">Dış Cephe</h3>
               </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Gazbeton &amp; Duvar Blokları</h3>
-                <p class="text-sm text-stone-600 mt-2">Ytong gazbeton blok, lento ve paneller; Teknobims hafif yapı elemanları.</p>
+              <ul class="space-y-2.5 text-sm text-stone-700">
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Gazbeton, tuğla ve bims duvar uygulamaları</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Dış cephe ısı yalıtım sistemleri</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Makineli çimento esaslı hazır sıvalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Kara kaba sıvalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Isı yalıtımlı hazır sıvalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Yüzey tamiratları ve boyalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Dekoratif kaplamalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Temel ve duvar su yalıtımları</li>
+              </ul>
+            </div>
+            <div class="reveal-on-scroll fade-up delay-200 p-8 rounded-2xl border border-stone-200 bg-[#f8f7f4]">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0"><i data-lucide="home" class="w-5 h-5"></i></div>
+                <h3 class="font-display text-xl font-bold text-navy-900">İç Cephe</h3>
               </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-200 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1762380368593-a0d4c49af47f?w=900&q=70&auto=format&fit=crop" alt="Tuğla duvar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Tuğla &amp; Bims</h3>
-                <p class="text-sm text-stone-600 mt-2">Kilsan karkas, izo ve termokil tuğlalar, asmolen, baca tuğlası ve lentolar.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-300 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?w=900&q=70&auto=format&fit=crop" alt="Duvara alçı sıva uygulaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Alçı &amp; Alçı Levhalar</h3>
-                <p class="text-sm text-stone-600 mt-2">ABS ve Dalsan sıva, saten ve makine alçıları; alçıpan, Boardex ve profil sistemleri.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-100 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1763052088730-1b4c6bd3f590?w=900&q=70&auto=format&fit=crop" alt="Çatı kaplaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Çatı &amp; Su Yalıtımı</h3>
-                <p class="text-sm text-stone-600 mt-2">Onduline çatı örtüleri, bitümlü membranlar, Ravproof ve Fox Multiseal su yalıtımı.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-200 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1775160225106-0ae68ce89e77?w=900&q=70&auto=format&fit=crop" alt="Isı yalıtım levhaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Isı &amp; Ses Yalıtımı</h3>
-                <p class="text-sm text-stone-600 mt-2">İzocam, Ravago, Knauf taş ve cam yünü; Austrotherm ve Birpor EPS; Baumit mantolama sistemleri.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-300 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1701850009190-2859ba2aeea6?w=900&q=70&auto=format&fit=crop" alt="Harç uygulaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Yapı Kimyasalları</h3>
-                <p class="text-sm text-stone-600 mt-2">Fox, Baumit, Weber, Tekno ve Entegre: seramik yapıştırıcı, derz, tamir harcı, grout ve sıvalar.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-100 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?w=900&q=70&auto=format&fit=crop" alt="Çimento torbaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Çimento &amp; Agregalar</h3>
-                <p class="text-sm text-stone-600 mt-2">Traçim ve Akçansa torbalı çimento; mıcır, kaba kum, Meriç kumu ve şap kumu.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-200 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1667491295131-c6ccecd35f65?w=900&q=70&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5kZXJmbG9vciUyMGhlYXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Yerden ısıtma boruları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Yerden Isıtma Sistemleri</h3>
-                <p class="text-sm text-stone-600 mt-2">Austrotherm yerden ısıtma strafoları ve sistem bileşenleri.</p>
-              </div>
-            </a>
-            <a href="#urunler" onclick="return navigateTo('urunler')" class="reveal-on-scroll fade-up delay-300 group relative overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-2xl transition-all duration-500">
-              <div class="aspect-[4/3] overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1643822308521-1da534425d82?w=900&q=70&auto=format&fit=crop" alt="Boya kovaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Boya: Filli Boya &amp; Fawori</h3>
-                <p class="text-sm text-stone-600 mt-2">İç-dış cephe boyaları, astar, macun ve renk danışmanlığı. Yetkili bayi.</p>
-              </div>
-            </a>
+              <ul class="space-y-2.5 text-sm text-stone-700">
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Gazbeton, tuğla ve bims duvar uygulamaları</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Makine esaslı alçı sıvalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Makineli çimento esaslı hazır sıvalar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Saten alçı ve iç cephe boyaları</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Alçıpan asma tavan ve bölme duvarlar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Metal asma tavanlar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Hazır ve kuru şaplar</li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Seramik ve granit kaplamalar</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -557,7 +540,7 @@
           -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll fade-up delay-100">
             <div class="reel shadow-2xl ring-1 ring-white/10">
-              <video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span>
@@ -565,7 +548,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10 md:translate-y-8">
-              <video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span>
@@ -573,7 +556,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10">
-              <video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Depo &amp; stok</span>
@@ -581,7 +564,7 @@
               </div>
             </div>
             <div class="reel shadow-2xl ring-1 ring-white/10 md:translate-y-8">
-              <video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video>
+              <video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video>
               <div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950">
                 <span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span>
                 <span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span>
@@ -727,7 +710,7 @@
               <strong class="text-navy-900">İYM İstanbul Yapı Malzemeleri Mimarlık San. Tic. Ltd. Şti.</strong>, Eyüpsultan Alibeyköy'de faaliyet gösteren bir yapı malzemeleri satış ve uygulama merkezidir. Profesyonel uygulamacılardan müteahhitlere, mimarlardan bireysel müşterilere kadar yapı sektörünün tüm paydaşlarına güvenilir ürün tedariği sunuyoruz. Gazbetondan tuğlaya, alçıdan yalıtıma, yapı kimyasallarından çimento ve boyaya kadar temelden çatıya ihtiyaç duyulan her malzeme tek noktada.
             </p>
             <p class="mb-4 leading-relaxed text-stone-700">
-              Ytong, Kilsan, Teknobims, ABS Alçı, Dalsan, Onduline, Baumit, İzocam, Ravago, Fox, Weber, Tekno, Knauf, Entegre, Austrotherm, Birpor EPS, Traçim ve Akçansa gibi sektörün lider markalarıyla çalışıyoruz. Filli Boya ve Fawori yetkili satış noktası olarak boya ve yalıtımda yalnızca ürün değil, uygulama ve teknik destek de sunuyoruz. Geniş ürün gamımızı hızlı sevkiyat, doğru ürün yönlendirmesi ve çözüm odaklı hizmet anlayışıyla bir araya getiriyoruz.
+              Ytong, Kilsan, Dalsan, Knauf, Onduline, Baumit, İzocam, Kalekim, Weber, Nippon Paint, Filli Boya, Fawori, Marshall ve daha fazlası: 30'dan fazla lider markayla çalışıyoruz. Yalnızca ürün değil, duvar örgüsünden ısı yalıtımına, sıvadan boyaya uygulama ve teknik destek de sunuyoruz. Geniş ürün gamımızı hızlı sevkiyat, doğru ürün yönlendirmesi ve çözüm odaklı hizmet anlayışıyla bir araya getiriyoruz.
             </p>
             <p class="mb-8 leading-relaxed text-stone-700">
               Kendi kamyon ve forklift filomuz sayesinde siparişleriniz paletli ve düzenli biçimde, söz verdiğimiz zamanda şantiyenizde olur. Alibeyköy merkez ve Küçükköy şubemizle İstanbul Avrupa Yakası'nın geneline hizmet veriyoruz.
@@ -751,24 +734,7 @@
         </div>
       </div>
 
-      <!-- Misyon / Vizyon -->
-      <div class="py-20 bg-navy-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(#e2c65f 1px, transparent 1px); background-size: 22px 22px;"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="reveal-on-scroll fade-right p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-gold-500/40 transition-colors duration-300">
-              <div class="w-14 h-14 bg-gold-500 rounded-xl flex items-center justify-center mb-6 text-navy-950 shadow-lg"><i data-lucide="target" class="w-7 h-7"></i></div>
-              <h3 class="font-display text-2xl font-bold mb-4">Misyonumuz</h3>
-              <p class="text-stone-300 leading-relaxed">Doğru malzemeyi, doğru fiyatla ve zamanında sahaya ulaştırarak müteahhitlerin, ustaların ve ev sahiplerinin işini kolaylaştırmak; her projede kalıcı bir iş ortağı olmak.</p>
-            </div>
-            <div class="reveal-on-scroll fade-left p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-gold-500/40 transition-colors duration-300">
-              <div class="w-14 h-14 bg-gold-500 rounded-xl flex items-center justify-center mb-6 text-navy-950 shadow-lg"><i data-lucide="eye" class="w-7 h-7"></i></div>
-              <h3 class="font-display text-2xl font-bold mb-4">Vizyonumuz</h3>
-              <p class="text-stone-300 leading-relaxed">Güler yüzü, şeffaflığı ve teslimat disipliniyle İstanbul'da yapı malzemesi denince ilk akla gelen; satış ve uygulamayı bir arada sunan güvenilir merkez olmak.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Misyon / Vizyon "Kurumsal" sayfasına taşındı -->
 
       <!-- Değerlerimiz (yorumlardan) -->
       <div class="py-24 bg-[#f8f7f4]">
@@ -841,6 +807,62 @@
       </div>
     </section>
 
+    <!-- ============ KURUMSAL ============ -->
+    <section id="kurumsal" class="page-section" data-title="Kurumsal | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[46vh] flex items-center justify-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/30"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-20 reveal-on-scroll fade-down is-visible">
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-4">Kurumsal</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Misyonumuz ve vizyonumuz</h1>
+          <p class="text-stone-300 text-lg">Vizyonumuzla sektör standartlarına yön veriyoruz.</p>
+        </div>
+      </div>
+
+      <div class="py-20 bg-navy-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(#e2c65f 1px, transparent 1px); background-size: 22px 22px;"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="reveal-on-scroll fade-right p-8 md:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-gold-500/40 transition-colors duration-300">
+              <div class="w-14 h-14 bg-gold-500 rounded-xl flex items-center justify-center mb-6 text-navy-950 shadow-lg"><i data-lucide="target" class="w-7 h-7"></i></div>
+              <h2 class="font-display text-2xl font-bold mb-4">Misyonumuz</h2>
+              <p class="text-stone-300 leading-relaxed">İYM İstanbul Yapı olarak, yapı malzemeleri sektöründe yenilikçi ve sürdürülebilir çözümler sunarak müşterilerimizin ihtiyaçlarını güvenilir, kaliteli ve uygun maliyetli bir şekilde karşılamayı hedefliyoruz. Temelden çatıya tüm inşaat projelerinde uzman kadromuz ve tecrübemizle değer yaratmaya devam ediyoruz.</p>
+            </div>
+            <div class="reveal-on-scroll fade-left p-8 md:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-gold-500/40 transition-colors duration-300">
+              <div class="w-14 h-14 bg-gold-500 rounded-xl flex items-center justify-center mb-6 text-navy-950 shadow-lg"><i data-lucide="eye" class="w-7 h-7"></i></div>
+              <h2 class="font-display text-2xl font-bold mb-4">Vizyonumuz</h2>
+              <p class="text-stone-300 leading-relaxed">Sektördeki öncü konumumuzu koruyarak inşaat malzemeleri ve uygulamalarında lider bir marka olmayı amaçlıyoruz. Müşterilerimiz ve iş ortaklarımızla güçlü ve uzun vadeli ilişkiler kurarak, sürekli gelişen ve yenilenen hizmet anlayışımızla geleceğin yapılarını inşa ediyoruz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-20 bg-[#f8f7f4]">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="reveal-on-scroll fade-up delay-100 p-7 rounded-2xl bg-white border border-stone-200">
+              <p class="font-display text-3xl font-extrabold text-gold-500 mb-2">01</p>
+              <h3 class="font-display font-bold text-navy-900 mb-2">Geniş Ürün Gamı</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">Temelden çatıya yapı malzemeleri; 30'dan fazla lider marka tek çatı altında.</p>
+            </div>
+            <div class="reveal-on-scroll fade-up delay-200 p-7 rounded-2xl bg-white border border-stone-200">
+              <p class="font-display text-3xl font-extrabold text-gold-500 mb-2">02</p>
+              <h3 class="font-display font-bold text-navy-900 mb-2">Hızlı Sevkiyat</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">Şantiye ve proje teslimatları; kendi araç ve forklift filomuzla.</p>
+            </div>
+            <div class="reveal-on-scroll fade-up delay-300 p-7 rounded-2xl bg-white border border-stone-200">
+              <p class="font-display text-3xl font-extrabold text-gold-500 mb-2">03</p>
+              <h3 class="font-display font-bold text-navy-900 mb-2">Güvenilir Hizmet</h3>
+              <p class="text-sm text-stone-600 leading-relaxed">Satış öncesi ve sonrası destek; uygulama ve teknik danışmanlık.</p>
+            </div>
+          </div>
+          <div class="mt-10 text-center reveal-on-scroll fade-up">
+            <a href="katalog/IYM-2026-Urun-Katalogu.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-navy-900 hover:bg-navy-800 text-white font-semibold transition-all hover:-translate-y-0.5"><i data-lucide="book-open" class="w-4 h-4"></i> 2026 Ürün Kataloğu (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ ÜRÜNLER ============ -->
     <section class="page-section" id="urunler" data-title="Ürünler | İYM İstanbul Yapı Malzemeleri">
       <div class="relative w-full min-h-[46vh] flex items-center justify-center bg-navy-950 overflow-hidden">
@@ -849,7 +871,7 @@
         <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-20 reveal-on-scroll fade-down is-visible">
           <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-4">Ürünlerimiz</p>
           <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Temelden çatıya tüm yapı malzemeleri</h1>
-          <p class="text-stone-300 text-lg">2026 ürün kataloğumuzdaki sekiz ürün grubu ve 18 lider marka; stoktan ve şantiyeye teslim.</p>
+          <p class="text-stone-300 text-lg">Dokuz ürün grubu, 30'dan fazla lider marka; stoktan ve şantiyeye teslim. Gruba tıklayın, markaları ve ürünleri görün.</p>
         </div>
       </div>
 
@@ -866,115 +888,106 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" id="product-grid">
-          <!-- Kartlar 2026 ürün kataloğu ile uyumlu: 8 ürün grubu + boya. Marka ve ürün adları katalogdan. -->
-          <!-- 1 Gazbeton & Duvar Blokları -->
-          <article data-cat="duvar" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          <!-- Kartlar marka adı içermez; her kart kendi kategori sayfasına (#urun-...) gider, markalar ve ürünler orada listelenir. -->
+          <a href="#urun-gazbeton" onclick="return navigateTo('urun-gazbeton')" data-cat="duvar" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1604290443024-3b64d3f0a9b4?w=900&q=70&auto=format&fit=crop" alt="Gazbeton blokları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Duvar</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Gazbeton &amp; Duvar Blokları: Ytong, Teknobims</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Ytong G2/04 ve G4/06 duvar blokları, lento, düşey-yatay duvar, çatı ve döşeme panelleri, Multipor yalıtım levhası, örgü tutkalı ve el aletleri. Teknobims izolasyonlu hafif duvar blokları, U blok, lento ve ısı yalıtımlı örgü harcı.</p>
-              <button onclick="requestQuote('Gazbeton')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Gazbeton &amp; Duvar Blokları</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Gazbeton blok, lento ve paneller; hafif izolasyonlu duvar blokları, örgü tutkalı ve el aletleri.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 2 Tuğla & Bims -->
-          <article data-cat="duvar" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-tugla" onclick="return navigateTo('urun-tugla')" data-cat="duvar" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1762380368593-a0d4c49af47f?w=900&q=70&auto=format&fit=crop" alt="Tuğla duvar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Duvar</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Tuğla &amp; Bims: Kilsan</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Termokil serisi ısı yalıtımlı tuğlalar, yeni nesil karkas tuğlalar, İzo tuğlalar, baca tuğlaları (yuvarlak, kare, şönt), asmolen tuğlalar ve 8,5-15 cm lentolar; paletli teslimat.</p>
-              <button onclick="requestQuote('Tuğla')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Tuğla &amp; Bims</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Isı yalıtımlı, karkas ve izo tuğlalar; baca ve asmolen tuğlaları, bims bloklar ve lentolar.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 3 Alçı & Alçı Levhalar -->
-          <article data-cat="alci" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-alci" onclick="return navigateTo('urun-alci')" data-cat="alci" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?w=900&q=70&auto=format&fit=crop" alt="Duvara alçı sıva uygulaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Alçı</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Alçı &amp; Alçı Levhalar: ABS, Dalsan</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">ABS M19 makine sıva alçısı, saten perdah, Sıva 1982, S400; Extreme dış cephe plakası ve Intreme Fit alçıpanlar. Dalsan Boardex, Corex levhalar, Alçıtek, Satentek, Sıvatek, Grio serisi ve duvar-tavan profilleri. Ytong Alçı-Mak, Alçı-El, Alçı-Saten.</p>
-              <button onclick="requestQuote('Hazır Sıva / Alçı')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Alçı &amp; Alçı Levhalar</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Makine ve saten alçıları, sıva alçıları; alçıpan levhalar, dış cephe plakaları ve profil sistemleri.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 4 Çatı & Su Yalıtımı -->
-          <article data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-cati" onclick="return navigateTo('urun-cati')" data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1763052088730-1b4c6bd3f590?w=900&q=70&auto=format&fit=crop" alt="Çatı kaplaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Çatı</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Çatı &amp; Su Yalıtımı: Onduline, Ravago, Fox</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Onduline HR çatı kaplama, Bituline PP300 / PP40 M temel su yalıtımı, Ondutiss Barrier Reflex, Cambridge Xpress shingle, Fondaline Drain350, Ondulikit membranlar ve çatı aksesuarları. Ravproof bitümlü membran, Tyvek nefes alan örtü, Fox Multiseal sürme su yalıtımı.</p>
-              <button onclick="requestQuote('Çatı / Su Yalıtımı')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Çatı &amp; Su Yalıtımı</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Çatı kaplama levhaları, bitümlü membranlar, örtüler, sürme su yalıtımları ve çatı aksesuarları.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 5 Isı & Ses Yalıtımı -->
-          <article data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-isi" onclick="return navigateTo('urun-isi')" data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1775160225106-0ae68ce89e77?w=900&q=70&auto=format&fit=crop" alt="Isı yalıtım levhaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Yalıtım</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Isı &amp; Ses Yalıtımı: İzocam, Ravago, Austrotherm, Baumit</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">İzocam cam yünü ve taş yünü levha, şilte ve prefabrik borular, Optima Smart, Foamboard. Ravago ısı yalıtım ve klima levhaları. Austrotherm EPS (Optimier, Plus, Premium, Fassade), Birpor EPS, Knauf Mineral Plus. Baumit Power, Pro, Open ve Star mantolama sistemleri; uygulama hizmetiyle.</p>
-              <button onclick="requestQuote('Yalıtım')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Isı &amp; Ses Yalıtımı</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Taş yünü, cam yünü, EPS ve XPS levhalar; mantolama sistemleri, şilteler ve prefabrik borular.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 6 Yerden Isıtma -->
-          <article data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-isitma" onclick="return navigateTo('urun-isitma')" data-cat="yalitim" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1667491295131-c6ccecd35f65?w=900&q=70&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5kZXJmbG9vciUyMGhlYXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Yerden ısıtma boruları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Isıtma</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Yerden Isıtma Sistemleri</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Austrotherm yerden ısıtma strafoları (nopalı EPS levhalar) ve sistem bileşenleri; konut, ofis ve ticari alanlarda enerji verimli ısıtma altyapısı.</p>
-              <button onclick="requestQuote('Yerden Isıtma')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Yerden Isıtma Sistemleri</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Yerden ısıtma strafoları ve sistem bileşenleri; konut ve ticari alanlar için enerji verimli altyapı.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 7 Yapı Kimyasalları -->
-          <article data-cat="kimyasal" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-kimyasal" onclick="return navigateTo('urun-kimyasal')" data-cat="kimyasal" class="product-card reveal-on-scroll fade-up delay-100 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1701850009190-2859ba2aeea6?w=900&q=70&auto=format&fit=crop" alt="Harç uygulaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Kimyasal</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Yapı Kimyasalları: Fox, Baumit, Weber, Tekno, Entegre</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Fox Cerapol, Cera ve Ceraplus seramik yapıştırıcıları, Aquafuga derz dolgusu, Grout ve Mortar tamir harçları, Therm-All mantolama harçları, Promatic makine sıvası. Baumit Nivofix, Duocontact, Procontact, karo yapıştırıcıları, Beton B20 / B30. Weber.kol Flex Porselen, Tekno Grout 350, Entegre Sıvamatik.</p>
-              <button onclick="requestQuote('Yapı Kimyasalları')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Yapı Kimyasalları</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Seramik yapıştırıcıları, derz dolguları, tamir harçları, grout, hazır sıvalar ve mantolama harçları.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 8 Çimento & Agregalar -->
-          <article data-cat="cimento" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-cimento" onclick="return navigateTo('urun-cimento')" data-cat="cimento" class="product-card reveal-on-scroll fade-up delay-200 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?w=900&q=70&auto=format&fit=crop" alt="Çimento torbaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Çimento</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Çimento &amp; Agregalar: Traçim, Akçansa</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Traçim Portland 42,5, Portland Kalkerli 32,5 ve çevre dostu CEMentra; Akçansa Portland Kompoze 32,5 (25 / 50 kg) ve Portland 52,5. Mıcır, kaba kum, Meriç kumu ve şap kumu. Torba, palet ya da dökme; forkliftli indirme ile teslim.</p>
-              <button onclick="requestQuote('Çimento')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Çimento &amp; Agregalar</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">Torbalı Portland ve kompoze çimentolar; mıcır, kaba kum, Meriç kumu ve şap kumu.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
-          <!-- 9 Boya -->
-          <article data-cat="boya" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
+          </a>
+          <a href="#urun-boya" onclick="return navigateTo('urun-boya')" data-cat="boya" class="product-card reveal-on-scroll fade-up delay-300 group border border-stone-200 rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition-all duration-500 flex flex-col">
             <div class="h-56 overflow-hidden relative bg-stone-100">
               <img src="https://images.unsplash.com/photo-1643822308521-1da534425d82?w=900&q=70&auto=format&fit=crop" alt="Boya kovaları" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
               <span class="absolute top-3 left-3 px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-navy-950/85 text-gold-300 backdrop-blur">Boya</span>
             </div>
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="font-display text-lg font-bold text-navy-900">Boya: Filli Boya &amp; Fawori</h3>
-              <p class="text-sm text-stone-600 mt-2 flex-grow">Yetkili satış noktası. İç cephe, dış cephe, tavan boyaları; astar, macun, silikonlu ve dekoratif ürünler. Renk kartelası ve uygulama desteği.</p>
-              <button onclick="requestQuote('Boya')" class="mt-5 w-full py-2.5 border border-stone-200 rounded-lg text-sm font-semibold text-navy-900 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all">Teklif İste</button>
+              <h3 class="font-display text-lg font-bold text-navy-900 group-hover:text-gold-600 transition-colors">Boya</h3>
+              <p class="text-sm text-stone-600 mt-2 flex-grow">İç ve dış cephe boyaları, tavan boyaları, astar ve macunlar; renk danışmanlığı ve uygulama desteği.</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 group-hover:text-gold-600">Markalar ve ürünler <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></span>
             </div>
-          </article>
+          </a>
         </div>
 
         <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
@@ -983,6 +996,478 @@
             <p class="text-stone-300 text-sm mt-1">Tedarik ağımız geniş; özel ürün ve marka taleplerinizi bize iletin, sizin için temin edelim.</p>
           </div>
           <a href="https://wa.me/905522070804?text=Merhaba%2C%20listede%20olmayan%20bir%20%C3%BCr%C3%BCn%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="shrink-0 inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp'tan Sorun</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÜRÜN KATEGORİ SAYFALARI ============
+         Her kategori ayrı bir sayfa (#urun-...). Menüde "Ürünler" aktif kalır (showPage içinde urun- öneki urunler'e eşlenir).
+         Markalar işletme sahibinin listesinden, ürünler 2026 kataloğundan. -->
+    <section id="urun-gazbeton" class="page-section" data-title="Gazbeton & Duvar Blokları | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1604290443024-3b64d3f0a9b4?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Gazbeton &amp; Duvar Blokları</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Hafif, ısı yalıtımlı ve hızlı örülen duvar sistemleri. Blok, lento ve panellerden örgü tutkalı ve el aletlerine kadar tüm bileşenler stoktan.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Ytong</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">STT</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Teknobims</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>G2/04 ve G4/06 gazbeton duvar blokları (tüm kalınlıklar)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>G3/05 gazbeton lentolar</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Düşey ve yatay duvar panelleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Çatı ve döşeme panelleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Multipor mineral yalıtım levhası</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Gazbeton örgü tutkalı</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>İzolasyonlu hafif bims duvar blokları (TBL serisi)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>U blok, lento ve klavuz plakalar</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Isı yalıtımlı örgü harcı</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Gazbeton el aletleri: testere, tutkal malası, rende, lastik tokmak, kanal ve buat açıcı</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Gazbeton')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-tugla" class="page-section" data-title="Tuğla & Bims | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1762380368593-a0d4c49af47f?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Tuğla &amp; Bims</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Yaz-kış termal konfor sağlayan ısı yalıtımlı tuğlalardan asmolen ve baca tuğlalarına, bims bloklara kadar duvar ve döşeme çözümleri; paletli teslimat.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Kilsan</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Derya</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Teknobims</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Termokil serisi ısı yalıtımlı tuğlalar (Termokil 15 / 20 / 25)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Yeni nesil karkas tuğlalar (23,5x10x23,5 - 25x20x25 cm)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>İzo tuğlalar (14,5 W - 30 W; 18,5 AB, 23,5 AB)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Baca tuğlaları: yuvarlak, kare ve şönt</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Asmolen tuğlalar (ASM 20 - ASM 32,5)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Lentolar: 8,5 / 10 / 13,5 / 15 cm genişlik, 100-300 cm boy</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Bims duvar blokları ve bims briket</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>T ve köşe birleşim çözümleri</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Tuğla')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-alci" class="page-section" data-title="Alçı & Alçı Levhalar | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Alçı &amp; Alçı Levhalar</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Makine ve el sıvası alçılarından saten perdaha, alçıpan levhalardan asma tavan profillerine iç mekân yüzey sistemlerinin tamamı.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Dalsan</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">ABS Alçı</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Knauf</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Entegre</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Atışkan Alçı</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Beşer</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Makine sıva alçıları (M19, S400, Alçıtek, Alçı-Mak)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>El sıva alçıları ve perlitli sıva alçısı</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Saten perdah alçıları (Satentek, Alçı-Saten)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Silo alçı sistemleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Standart, yeşil (nem dayanımlı) ve kırmızı (yangın dayanımlı) alçıpan levhalar</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Boardex ve Extreme dış cephe plakaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Duvar ve tavan profilleri, bağlantı elemanları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Derz dolgu ve derz bandı ürünleri (Grio serisi)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Hazır Sıva / Alçı')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-cati" class="page-section" data-title="Çatı & Su Yalıtımı | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1763052088730-1b4c6bd3f590?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Çatı &amp; Su Yalıtımı</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Çatı kaplama ve örtülerinden temel-perde su yalıtımına, bitümlü membranlardan sürme ürünlere kadar bina zarfını su geçirmez kılan çözümler.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Onduline</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">İsonem</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Ravago</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Fixa</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Newkim</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Bonus</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Onduline HR çatı kaplama levhaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Bitümlü su yalıtım membranları (PP300, PP40 M yeşil, Ravproof)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nefes alan ve yansıtıcı çatı örtüleri (Barrier Reflex, Tyvek)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Shingle çatı kaplaması (Cambridge Xpress)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Drenaj levhaları (Fondaline Drain350)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Sürme su yalıtımları: yarı ve tam elastik, çimento ve akrilik esaslı</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Temel ve perde su yalıtım ürünleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Bitüm astarı, şeffaf çatı kapağı, çatı çivisi ve aksesuarlar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Çatı / Su Yalıtımı')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-isi" class="page-section" data-title="Isı & Ses Yalıtımı | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1775160225106-0ae68ce89e77?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Isı &amp; Ses Yalıtımı</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Dış cephe mantolama sistemlerinden çatı ve bölme yalıtımına, tesisat borularından sanayi uygulamalarına enerji tasarrufu ve akustik konfor.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">İzocam</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Ravago</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Knauf</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Baumit</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Expert</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Lion</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Taş yünü ve cam yünü ısı yalıtım levhaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>EPS ve XPS mantolama levhaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Mantolama sistemleri: yapıştırıcı, sıva, file, dübel ve kaplama (Power, Pro, Open, Star sistemler)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Çatı şilteleri (alüminyum folyolu) ve sanayi şilteleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Ara bölme taş yünü ve Optima Smart</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Cam yünü / taş yünü prefabrik borular, Peflex levha ve boru</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Klima levhaları, Foamboard ve sanayi levhaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nefes alan su tutucu örtüler</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Uygulama hizmeti: ücretsiz keşif ve profesyonel mantolama ekibi</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Yalıtım')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-isitma" class="page-section" data-title="Yerden Isıtma Sistemleri | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1667491295131-c6ccecd35f65?w=1800&q=70&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5kZXJmbG9vciUyMGhlYXRpbmd8ZW58MHx8MHx8fDA%3D" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Yerden Isıtma Sistemleri</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Konut, ofis ve ticari alanlarda enerji verimli, görünmez ve homojen ısıtma altyapısı; şap altı strafolardan sistem bileşenlerine.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 gap-10">
+          <div class="reveal-on-scroll fade-up">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nopalı yerden ısıtma strafoları (EPS)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Düz yerden ısıtma levhaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Kenar yalıtım bantları ve buhar kesici folyolar</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Boru sabitleme klipsleri ve aksesuarlar</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Hazır ve kuru şap sistemleri ile uyumlu uygulama</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Yerden Isıtma')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-kimyasal" class="page-section" data-title="Yapı Kimyasalları | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1701850009190-2859ba2aeea6?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Yapı Kimyasalları</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Yapıştırma, derz, tamir, sıva ve yüzey hazırlığı: projenin her aşaması için çimento ve akrilik esaslı profesyonel ürünler.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Kalekim</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Weber</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Tekno</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Bonus</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Fixa</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Newkim</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Adakim</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">İsonem</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Optimix</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Expert</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Lion</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Baumit</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Entegre</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Seramik ve porselen yapıştırıcıları (C1T, C1TE, C2TE, C2TES1; flex ve büyük boy porselen)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Gazbeton ve tuğla örgü yapıştırıcıları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Derz dolguları (flex, silikonlu, antibakteriyel)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Tamir harçları, grout ve rötre yapmayan dolgu harçları (Grout 350 vb.)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Mantolama yapıştırıcı ve sıvaları (Nivofix, Duocontact, Procontact, Therm-All)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Makine ve el sıvaları: iç-dış cephe, perlitli, çimento esaslı (Primo, MPI, MPA, Sıvamatik, Promatic)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Hazır kuru beton ve yapı harçları (Beton B20 / B30)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Brüt beton astarı ve yüzey hazırlık ürünleri</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Zemin sertleştirici ve şap ürünleri (Hardtop)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Beton katkıları ve su itici katkılar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Yapı Kimyasalları')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-cimento" class="page-section" data-title="Çimento & Agregalar | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Çimento &amp; Agregalar</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Torbalı ve paletli çimento çeşitleri ile kum ve mıcır; forkliftli indirme ile şantiyeye teslim.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Adaçim</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Çimentaş</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Portland çimento CEM I 42,5 R ve 52,5 R</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Portland kalkerli çimento CEM II 32,5 R</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Portland kompoze çimento 32,5 R (25 ve 50 kg torba)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Çevre dostu düşük karbonlu çimento</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Mıcır (dayanıklılık gerektiren projeler)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Kaba kum (ince dokulu, homojen)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Meriç kumu</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Şap kumu</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Çimento')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="urun-boya" class="page-section" data-title="Boya | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[40vh] flex items-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1643822308521-1da534425d82?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/30"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full reveal-on-scroll fade-down is-visible">
+          <a href="#urunler" onclick="return navigateTo('urunler')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200 mb-5 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Tüm ürün grupları</a>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-3">Ürünler</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Boya</h1>
+          <p class="text-stone-300 text-lg max-w-2xl">Yetkili satış noktası olduğumuz markaların iç cephe, dış cephe ve tavan boyaları; astar ve macunlar. Renk danışmanlığı ve isteğe bağlı uygulama ekibi.</p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-1 reveal-on-scroll fade-right">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Nippon Paint</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Filli Boya</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Fawori</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Marshall</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Dalmaçyalı</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-stone-200 text-sm font-semibold text-navy-900">Tempo</span>
+            </div>
+          </div>
+          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Minoa Premium Matt / Silk Matt (GreenGuard Gold sertifikalı, kokusuz)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Minoa Premium Primer (akrilik kopolimer astar)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Leona (ipeksi mat, tam silinebilir, HYG-Formula)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Moss (soft mat, tam silinebilir)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Aliza (plastik iç cephe, duvar ve tavan)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint A+ Tavan Boyası</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Kozmik İpek ve Ultra Soft Mat (silikon esaslı, tam silinebilir)</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Silikonlu Mat ve Silikonlu Mat Antibakteriyel</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Plastik ve Plastik Antibakteriyel</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Tempo Özel İpek Silikonlu ve Silikonlu Mat</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Filli Boya, Marshall ve Dalmaçyalı iç-dış cephe boyaları</li>
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Astar, macun, silikonlu ve dekoratif ürünler; renk kartelası</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
+            <p class="text-stone-300 text-sm mt-1">Miktar ve teslimat tarihinizi yazın; marka alternatifleriyle aynı gün dönelim.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <button onclick="requestQuote('Boya')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif İste <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+            <a href="https://wa.me/905522070804?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold transition-all hover:-translate-y-0.5"><svg class="w-5 h-5 text-wa" fill="currentColor" aria-hidden="true"><use href="#wa-logo"/></svg> WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1026,7 +1511,7 @@
             <div class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-navy-900 text-gold-400"><i data-lucide="paintbrush" class="w-7 h-7"></i></div>
             <div>
               <h3 class="font-display text-xl font-bold text-navy-900 mb-2">Boya &amp; Renk Danışmanlığı</h3>
-              <p class="text-sm text-stone-600 leading-relaxed">Filli Boya ve Fawori yetkili satış noktası olarak iç-dış cephe için doğru ürün ve renk seçimi, metraj hesabı ve isteğe bağlı uygulama ekibi.</p>
+              <p class="text-sm text-stone-600 leading-relaxed">Nippon Paint, Filli Boya, Fawori ve Marshall yetkili satış noktası olarak iç-dış cephe için doğru ürün ve renk seçimi, metraj hesabı ve isteğe bağlı uygulama ekibi.</p>
             </div>
           </div>
           <div class="reveal-on-scroll fade-right delay-100 flex gap-6 p-8 border border-stone-200 rounded-2xl bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300">
@@ -1082,6 +1567,42 @@
       </div>
     </section>
 
+    <!-- ============ REFERANSLAR ============ -->
+    <section id="referanslar" class="page-section" data-title="Referanslar | İYM İstanbul Yapı Malzemeleri">
+      <div class="relative w-full min-h-[46vh] flex items-center justify-center bg-navy-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1800&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/30"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-20 reveal-on-scroll fade-down is-visible">
+          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gold-400 mb-4">Referanslar</p>
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Birlikte çalıştığımız kurumlar</h1>
+          <p class="text-stone-300 text-lg">Türkiye'nin önde gelen inşaat firmaları ve kamu kurumlarının projelerine malzeme tedarik ettik.</p>
+        </div>
+      </div>
+
+      <div class="py-20 max-w-7xl mx-auto px-6">
+        <!-- Referans listesi işletme sahibinden; logo dosyaları geldiğinde kartlara <img> eklenebilir -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Rams</span></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Ege Yapı</span></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Torunlar</span></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Emlak Konut</span></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">TMSF</span></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">TOKİ</span></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Kalyon</span></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Kiptaş</span></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300"><span class="font-display text-xl md:text-2xl font-extrabold text-navy-900 text-center">Gül İnşaat</span></div>
+        </div>
+
+        <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
+          <div>
+            <h3 class="font-display text-xl font-bold">Projeniz için tedarik ortağı mı arıyorsunuz?</h3>
+            <p class="text-stone-300 text-sm mt-1">Malzeme listenizi iletin; tekliflendirme, sipariş planı ve şantiye teslimini biz üstlenelim.</p>
+          </div>
+          <a href="#teklif" onclick="return navigateTo('teklif')" class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold transition-all hover:-translate-y-0.5">Teklif Al <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ GALERİ ============ -->
     <section id="galeri" class="page-section" data-title="Galeri | İYM İstanbul Yapı Malzemeleri">
       <div class="py-20 max-w-7xl mx-auto px-6">
@@ -1095,14 +1616,14 @@
         <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2 reveal-on-scroll fade-up"><i data-lucide="clapperboard" class="w-5 h-5 text-gold-500"></i> Videolar</h2>
         <!-- Video ekleme rehberi için ana sayfadaki "Sahadan videolar" bölümündeki yoruma bakın. Dosyalar: videos/reel-1.mp4 … videos/reel-8.mp4 -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 reveal-on-scroll fade-up delay-100">
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Depo &amp; stok</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-5.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Forklift ile indirme</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-6.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Gazbeton sevkiyatı</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-7.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Boya uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
-          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-8.mp4" muted loop playsinline preload="metadata" onerror="markReelMissing(this)"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Küçükköy şube</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yükleme &amp; sevkiyat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Şantiyeye teslimat</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Depo &amp; stok</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Yalıtım uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-5.mp4" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Forklift ile indirme</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-6.mp4" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Gazbeton sevkiyatı</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-7.mp4" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Boya uygulaması</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
+          <div class="reel shadow-lg ring-1 ring-stone-200"><video src="videos/reel-8.mp4" muted loop playsinline preload="metadata" onerror="this.closest('.reel').classList.add('reel--missing')"></video><div class="reel-placeholder flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-navy-800 to-navy-950"><span class="w-14 h-14 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 flex items-center justify-center"><i data-lucide="play" class="w-6 h-6 fill-current"></i></span><span class="text-white/90 font-display font-semibold">Küçükköy şube</span><span class="text-white/40 text-xs">Video yakında</span></div></div>
         </div>
 
         <!-- Fotoğraflar -->
@@ -1361,7 +1882,7 @@
               Hangi markaların ürünlerini satıyorsunuz?
               <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition-transform"></i>
             </button>
-            <div class="faq-answer hidden px-6 pb-5 text-sm text-stone-600 leading-relaxed">Ytong, Kilsan, Teknobims, ABS Alçı, Dalsan, Onduline, Baumit, İzocam, Ravago, Fox, Weber, Tekno, Knauf, Entegre, Austrotherm, Birpor EPS, Traçim ve Akçansa markalarını stoktan sunuyoruz; Filli Boya ve Fawori yetkili satış noktasıyız. Aradığınız özel bir marka varsa temin edebiliriz.</div>
+            <div class="faq-answer hidden px-6 pb-5 text-sm text-stone-600 leading-relaxed">Ytong, STT, Kilsan, Teknobims, Dalsan, ABS, Knauf, Entegre, Onduline, İzocam, Ravago, Baumit, Kalekim, Weber, Tekno, Bonus, Fixa, İsonem, Adaçim, Çimentaş, Nippon Paint, Filli Boya, Fawori, Marshall, Dalmaçyalı ve Tempo başta olmak üzere 30'dan fazla markayı stoktan sunuyoruz. Her ürün grubunun sayfasında o gruptaki markaları görebilirsiniz; aradığınız özel bir marka varsa temin edebiliriz.</div>
           </div>
           <div class="border border-stone-200 rounded-xl overflow-hidden bg-white">
             <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center gap-4 font-semibold text-navy-900 hover:bg-stone-50 transition-colors" aria-expanded="false" onclick="toggleFaq(this)">
@@ -1431,7 +1952,9 @@
         <ul class="space-y-2.5 text-sm">
           <li><a href="#anasayfa"   onclick="return navigateTo('anasayfa')"   class="hover:text-gold-400 transition-colors">Ana Sayfa</a></li>
           <li><a href="#hakkimizda" onclick="return navigateTo('hakkimizda')" class="hover:text-gold-400 transition-colors">Hakkımızda</a></li>
+          <li><a href="#kurumsal"   onclick="return navigateTo('kurumsal')"   class="hover:text-gold-400 transition-colors">Kurumsal</a></li>
           <li><a href="#hizmetler"  onclick="return navigateTo('hizmetler')"  class="hover:text-gold-400 transition-colors">Hizmetler</a></li>
+          <li><a href="#referanslar" onclick="return navigateTo('referanslar')" class="hover:text-gold-400 transition-colors">Referanslar</a></li>
           <li><a href="#galeri"     onclick="return navigateTo('galeri')"     class="hover:text-gold-400 transition-colors">Galeri</a></li>
           <li><a href="#sss"        onclick="return navigateTo('sss')"        class="hover:text-gold-400 transition-colors">Sık Sorulan Sorular</a></li>
           <li><a href="#teklif"     onclick="return navigateTo('teklif')"     class="hover:text-gold-400 transition-colors">Teklif Al</a></li>
@@ -1442,14 +1965,15 @@
       <div>
         <h3 class="font-display font-bold text-white mb-4">Ürün Grupları</h3>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Gazbeton &amp; Duvar Blokları</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Tuğla &amp; Bims</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Alçı &amp; Alçı Levhalar</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Çatı, Isı &amp; Su Yalıtımı</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Yapı Kimyasalları</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Çimento &amp; Agregalar</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Yerden Isıtma Sistemleri</a></li>
-          <li><a href="#urunler" onclick="return navigateTo('urunler')" class="hover:text-gold-400 transition-colors">Boya: Filli Boya &amp; Fawori</a></li>
+          <li><a href="#urun-gazbeton" onclick="return navigateTo('urun-gazbeton')" class="hover:text-gold-400 transition-colors">Gazbeton &amp; Duvar Blokları</a></li>
+          <li><a href="#urun-tugla"    onclick="return navigateTo('urun-tugla')"    class="hover:text-gold-400 transition-colors">Tuğla &amp; Bims</a></li>
+          <li><a href="#urun-alci"     onclick="return navigateTo('urun-alci')"     class="hover:text-gold-400 transition-colors">Alçı &amp; Alçı Levhalar</a></li>
+          <li><a href="#urun-cati"     onclick="return navigateTo('urun-cati')"     class="hover:text-gold-400 transition-colors">Çatı &amp; Su Yalıtımı</a></li>
+          <li><a href="#urun-isi"      onclick="return navigateTo('urun-isi')"      class="hover:text-gold-400 transition-colors">Isı &amp; Ses Yalıtımı</a></li>
+          <li><a href="#urun-kimyasal" onclick="return navigateTo('urun-kimyasal')" class="hover:text-gold-400 transition-colors">Yapı Kimyasalları</a></li>
+          <li><a href="#urun-cimento"  onclick="return navigateTo('urun-cimento')"  class="hover:text-gold-400 transition-colors">Çimento &amp; Agregalar</a></li>
+          <li><a href="#urun-isitma"   onclick="return navigateTo('urun-isitma')"   class="hover:text-gold-400 transition-colors">Yerden Isıtma Sistemleri</a></li>
+          <li><a href="#urun-boya"     onclick="return navigateTo('urun-boya')"     class="hover:text-gold-400 transition-colors">Boya</a></li>
         </ul>
       </div>
 
@@ -1483,7 +2007,11 @@
   <script>
     // ---------- Yardımcılar ----------
     const WA_NUMBER = '905522070804'; // WhatsApp numarası (ülke kodu ile, + olmadan)
-    const PAGES = ['anasayfa', 'hakkimizda', 'urunler', 'hizmetler', 'galeri', 'iletisim', 'teklif', 'sss', 'gizlilik'];
+    const PAGES = [
+      'anasayfa', 'hakkimizda', 'kurumsal', 'urunler', 'hizmetler', 'referanslar', 'galeri', 'iletisim', 'teklif', 'sss', 'gizlilik',
+      // Ürün kategori sayfaları
+      'urun-gazbeton', 'urun-tugla', 'urun-alci', 'urun-cati', 'urun-isi', 'urun-isitma', 'urun-kimyasal', 'urun-cimento', 'urun-boya'
+    ];
 
     // Lucide ikonlarını çiz
     lucide.createIcons();
@@ -1500,7 +2028,9 @@
 
       // Menü durumu (görünüm CSS'teki [aria-current="page"] kuralıyla)
       document.querySelectorAll('[data-nav]').forEach(link => {
-        if (link.dataset.nav === pageId) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+        // Kategori sayfalarında (urun-...) menüde "Ürünler" aktif kalsın
+        const navId = pageId.startsWith('urun-') ? 'urunler' : pageId;
+        if (link.dataset.nav === navId) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
       });
 
       // Mobil menüyü kapat
@@ -1612,10 +2142,7 @@
     }
 
     // ---------- Videolar ----------
-    // Video dosyası bulunamazsa kartı "Video yakında" yer tutucusuna çevir
-    function markReelMissing(video) {
-      video.closest('.reel')?.classList.add('reel--missing');
-    }
+    // Video dosyası bulunamazsa kart, <video onerror> ile 'Video yakında' yer tutucusuna döner (satır içi; script yüklenmeden de çalışır)
 
     // Kart ekrana girince videoyu başlat, çıkınca duraklat (kontrol çubuğu yok)
     const reelObserver = new IntersectionObserver((entries) => {
