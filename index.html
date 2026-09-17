@@ -110,11 +110,13 @@
 
     /* Ana menü bağlantıları (sekme çizgili) */
     .nav-link {
-      display: flex; align-items: center; margin: 0 13px; padding: 0 2px;
-      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase;
+      display: flex; align-items: center; margin: 0 9px; padding: 0 2px; white-space: nowrap;
+      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
       color: #57534e; border-top: 3px solid transparent; border-bottom: 3px solid transparent;
       transition: color .2s, border-color .2s;
     }
+    /* 8 öğe 1280px'te ancak sığıyor; geniş ekranda aralık açılır */
+    @media (min-width: 1536px) { .nav-link { margin: 0 13px; letter-spacing: 0.1em; } }
     .nav-link:hover { color: #0f1a2b; }
     .nav-link[aria-current="page"] { color: #0f1a2b; border-bottom-color: #c9a227; }
     #site-header { transition: box-shadow .3s; }
@@ -231,7 +233,7 @@
         </a>
 
         <!-- 8 menü öğesi lg (1024px) genişliğe sığmadığı için masaüstü menü xl'den itibaren gösterilir -->
-        <nav class="hidden xl:flex items-stretch self-stretch" aria-label="Ana menü">
+        <nav class="hidden xl:flex items-stretch self-stretch shrink-0" aria-label="Ana menü">
           <a href="#anasayfa"    data-nav="anasayfa"    onclick="return navigateTo('anasayfa')"    class="nav-link">Ana Sayfa</a>
           <a href="#hakkimizda"  data-nav="hakkimizda"  onclick="return navigateTo('hakkimizda')"  class="nav-link">Hakkımızda</a>
           <a href="#kurumsal"    data-nav="kurumsal"    onclick="return navigateTo('kurumsal')"    class="nav-link">Kurumsal</a>
@@ -1423,38 +1425,170 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div class="lg:col-span-1 reveal-on-scroll fade-right">
-            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
-            <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Nippon Paint"><img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Filli Boya"><img src="img/markalar/filli-boya.png" alt="Filli Boya" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fawori"><img src="img/markalar/fawori.png" alt="Fawori" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Marshall"><img src="img/markalar/marshall.png" alt="Marshall" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalmaçyalı"><img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Permolit"><img src="img/markalar/permolit.png" alt="Permolit" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Tempo</div>
+        <!-- Markalar -->
+        <div class="reveal-on-scroll fade-up">
+          <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Nippon Paint"><img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Filli Boya"><img src="img/markalar/filli-boya.png" alt="Filli Boya" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fawori"><img src="img/markalar/fawori.png" alt="Fawori" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Marshall"><img src="img/markalar/marshall.png" alt="Marshall" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalmaçyalı"><img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Permolit"><img src="img/markalar/permolit.png" alt="Permolit" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Tempo</div>
+          </div>
+        </div>
+
+        <!-- Ürünler: açıklamalar üretici föylerinden (Nippon Paint, Fawori ve Tempo iç cephe föyleri) -->
+        <div class="mt-14">
+          <div class="reveal-on-scroll fade-up">
+            <h2 class="font-display text-xl font-bold text-navy-900 mb-2 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
+            <p class="text-sm text-stone-500">Ürün bilgileri üretici föylerinden alınmıştır. Stok, renk ve fiyat için bize ulaşın.</p>
+          </div>
+          <div class="mt-10 reveal-on-scroll fade-up delay-100">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-5">
+              <h3 class="font-display text-lg font-bold text-navy-900">Nippon Paint</h3>
+              <span class="text-xs font-semibold text-stone-500">İç cephe boyaları ve astar · 6 ürün</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · GreenGuard Gold</span>
+                <h4 class="font-display font-bold text-navy-900">Minoa Premium Matt / Silk Matt</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">Çevre ve insan sağlığına duyarlı iç cephe boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>Çevre ve insan sağlığına duyarlıdır.</li>
+                  <li>Biyosit, ağır metal ve uçucu organik bileşikleri (VOC / sVOC) içermez. Türkiye&#x27;nin ilk ve tek GreenGuard Gold sertifikalı ürün serisidir.</li>
+                  <li>Özel olarak geliştirilmiş akrilik hibrid bağlayıcı ihtiva eder.</li>
+                  <li>Maksimum nefes alma kabiliyetine sahiptir.</li>
+                  <li>İpeksi Mat ve Mat olmak üzere iki farklı parlaklık sınıfında üretilmektedir.</li>
+                  <li>İpeksi Mat versiyonu yüksek silinebilme özelliğine sahiptir.</li>
+                  <li>Mat versiyonu tavan ve duvarda kullanıma uygundur.</li>
+                </ul>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe astarı</span>
+                <h4 class="font-display font-bold text-navy-900">Minoa Premium Primer</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">Akrilik kopolimer esaslı iç cephe astar boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>Akrilik kopolimer emülsiyon esaslı, beyaz pigmentli, çevre ve insan sağlığına duyarlı iç cephe astar boyasıdır.</li>
+                  <li>Boya ile yüzey arasında bağlayıcı köprü kurar, aderansı artırır.</li>
+                  <li>Boya sarfiyatını azaltır.</li>
+                  <li>Yüksek örtme ve aderans (yapışma) özelliği sayesinde boya ve zaman tasarrufu sağlar.</li>
+                  <li>Özellikle solvent bazlı boyadan su bazlı boyaya geçiş öncesinde uygulanır.</li>
+                </ul>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · İpeksi mat · Tam silinebilir</span>
+                <h4 class="font-display font-bold text-navy-900">Leona</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">İpeksi Mat Tam Silinebilir HYG-Formula İç Cephe Boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>Silikon teknolojisi ile güçlendirilerek yaratılan yüksek dayanım gücü ve kendisine özel ipeksi mat dokusu sayesinde gerçek silinme özelliğine sahiptir.</li>
+                  <li>HYG-Formula içeriği sayesinde maksimum silinebilme özelliği ile hijyenik mekânlar yaratır. Oteller, okullar, müzeler gibi çoklu kullanımla kirlenmeye müsait alanlar için uygun bir üründür.</li>
+                  <li>İpeksi mat dokusu ile ışığı mükemmel yansıtarak ortamda ferahlık hissi uyandırır.</li>
+                  <li>Örtücülüğü yüksektir.</li>
+                  <li>Kokusuzdur, VOC uyumlu ve çevre dostudur.</li>
+                </ul>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Soft mat · Tam silinebilir</span>
+                <h4 class="font-display font-bold text-navy-900">Moss</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">Soft Mat Tam Silinebilir HYG-Formula İç Cephe Boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>HYG-Formula içeriği sayesinde ekstra silinebilme özelliği ile temiz mekânlar yaratır.</li>
+                  <li>Soft mat parlaklığı ve mat görünümü ile lüks konut ve villa projeleri, mağazalar, galeriler gibi dekorasyonun ön planda olduğu alanlar için uygun bir üründür.</li>
+                  <li>Örtücülüğü yüksektir.</li>
+                  <li>Kokusuzdur, VOC uyumlu ve çevre dostudur.</li>
+                </ul>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Plastik · Duvar &amp; tavan</span>
+                <h4 class="font-display font-bold text-navy-900">Aliza</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">Duvarda ve Tavanda Kullanıma Uygun Plastik İç Cephe Boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>Özel formülü sayesinde hem mat hem de pürüzsüz yüzeyler oluşturan, maksimum hata kapatma özelliğine sahip bir plastik boyadır.</li>
+                  <li>Tam mat olması nedeniyle duvar ve tavanlarda kullanılabilir.</li>
+                  <li>Örtücülüğü yüksektir. Zaman ve işçilikten tasarruf sağlar.</li>
+                  <li>Kokusuzdur, VOC uyumlu ve çevre dostudur.</li>
+                  <li>Koyu renklerde mükemmel performans sergiler.</li>
+                </ul>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">Tavan boyası · Tam mat</span>
+                <h4 class="font-display font-bold text-navy-900">A+ Tavan Boyası</h4>
+                <p class="text-xs font-semibold text-stone-500 mt-1">+ Performans İç Cephe Tavan Boyası</p>
+                <ul class="mt-3 space-y-1.5 text-sm text-stone-600 leading-relaxed list-disc pl-4 marker:text-gold-500">
+                  <li>Maksimum örtücülük, kusursuz beyazlık ve maksimum metrajı bir arada sunar.</li>
+                  <li>Beyazlığını ilk uygulama sonrası da uzun yıllar muhafaza eder.</li>
+                  <li>Standart tavan boyalarına göre sunduğu pürüzsüz görünüm sayesinde özellikle asma tavan ve alçı tavan uygulamalarında üstün performans sunar.</li>
+                  <li>Tam mat olması nedeniyle yüzey hatalarını ekstra kapatma özelliğine sahiptir.</li>
+                </ul>
+              </article>
             </div>
           </div>
-          <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
-            <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-gold-500"></i> Ürünler</h2>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-700">
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Minoa Premium Matt / Silk Matt (GreenGuard Gold sertifikalı, kokusuz)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Minoa Premium Primer (akrilik kopolimer astar)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Leona (ipeksi mat, tam silinebilir, HYG-Formula)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Moss (soft mat, tam silinebilir)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint Aliza (plastik iç cephe, duvar ve tavan)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Nippon Paint A+ Tavan Boyası</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Kozmik İpek ve Ultra Soft Mat (silikon esaslı, tam silinebilir)</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Silikonlu Mat ve Silikonlu Mat Antibakteriyel</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Fawori Plastik ve Plastik Antibakteriyel</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Tempo Özel İpek Silikonlu ve Silikonlu Mat</li>
-              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Filli Boya, Marshall ve Dalmaçyalı iç-dış cephe boyaları</li>
+          <div class="mt-10 reveal-on-scroll fade-up delay-100">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-5">
+              <h3 class="font-display text-lg font-bold text-navy-900">Fawori</h3>
+              <span class="text-xs font-semibold text-stone-500">İç cephe boyaları · 6 ürün</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Silikon esaslı · İpek</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Kozmik İpek</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Silikon esaslı, ipek parlaklığa sahip, pürüzsüz, tam silinebilir su bazlı iç cephe boyasıdır. Usta dostudur, kolay uygulanır. Yüksek metraj yapar.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Silikonlu · Mat</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Silikonlu Mat</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Silikonlu, mat görünümlü, yüksek performanslı son kat iç cephe boyasıdır.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Silikonlu · Antibakteriyel</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Silikonlu Mat Antibakteriyel</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Silikonlu, mat görünümlü, antibakteriyel son kat iç cephe boyasıdır.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Plastik · Mat</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Plastik</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Mat görünümlü, ekonomi ve kaliteyi bir arada sunan, dekoratif iç cephe plastik boyasıdır.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Silikon esaslı · Soft mat</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Ultra Soft Mat</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Silikon esaslı, soft mat parlaklığa sahip, pürüzsüz, tam silinebilir su bazlı iç cephe boyasıdır. Usta dostudur, kolay uygulanır. Yüksek metraj yapar.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Plastik · Antibakteriyel</span>
+                <h4 class="font-display font-bold text-navy-900">Fawori Plastik Antibakteriyel</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Mat görünümlü, antibakteriyel, ekonomi ve kaliteyi bir arada sunan iç cephe boyasıdır.</p>
+              </article>
+            </div>
+          </div>
+          <div class="mt-10 reveal-on-scroll fade-up delay-100">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-5">
+              <h3 class="font-display text-lg font-bold text-navy-900">Tempo</h3>
+              <span class="text-xs font-semibold text-stone-500">İç cephe boyaları · 2 ürün</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Silikonlu · İpek mat</span>
+                <h4 class="font-display font-bold text-navy-900">Tempo Özel İpek Silikonlu</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Silikonlu, silinebilme özelliği olan, ipek mat dokuda dekoratif son kat su bazlı iç cephe duvar boyasıdır.</p>
+              </article>
+              <article class="p-6 rounded-2xl border border-stone-200 bg-white hover:border-gold-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                <span class="inline-block self-start text-[10.5px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 rounded-md px-2 py-1 mb-3">İç cephe · Akrilik · Silikon katkılı</span>
+                <h4 class="font-display font-bold text-navy-900">Tempo Silikonlu Mat</h4>
+                <p class="mt-2 text-sm text-stone-600 leading-relaxed">Akrilik esaslı, silikon katkılı, mat görünümlü, dekoratif iç cephe son kat duvar boyasıdır.</p>
+              </article>
+            </div>
+          </div>
+          <div class="mt-10 p-6 rounded-2xl border border-dashed border-stone-300 bg-[#f8f7f4] reveal-on-scroll fade-up">
+            <h3 class="font-display font-bold text-navy-900 mb-2">Diğer markalar ve tamamlayıcı ürünler</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-stone-700">
+              <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Filli Boya, Marshall ve Dalmaçyalı iç ve dış cephe boyaları</li>
               <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 mt-0.5 text-gold-600 shrink-0"></i>Astar, macun, silikonlu ve dekoratif ürünler; renk kartelası</li>
             </ul>
           </div>
         </div>
-
         <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
           <div>
             <h3 class="font-display text-xl font-bold">Bu ürün grubu için fiyat teklifi alın</h3>
