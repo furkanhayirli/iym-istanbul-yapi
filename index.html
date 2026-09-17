@@ -96,8 +96,8 @@
     .title-underline.center::after { left: 50%; transform: translateX(-50%); }
 
     /* Marka şeridi kayan animasyon */
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-track { animation: marquee 150s linear infinite; }
+    @keyframes marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+    .marquee-track { animation: marquee 150s linear infinite; will-change: transform; }
     .marquee:hover .marquee-track { animation-play-state: paused; }
     @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
@@ -359,70 +359,70 @@
       <!-- Marka şeridi -->
       <div class="bg-white border-y border-stone-200 py-6 overflow-hidden marquee" aria-label="Çalıştığımız markalar">
         <p class="text-center text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-400 mb-4">Yetkili satış noktası olduğumuz ve çalıştığımız markalar</p>
-        <div class="flex items-center marquee-track w-max gap-14 px-7">
+        <div class="flex items-center marquee-track w-max">
           <!-- Liste 2 kez tekrarlanır (kesintisiz kayma için). Logolar img/markalar/ altında. -->
-          <img src="img/markalar/ytong.png" alt="Ytong" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/kilsan.png" alt="Kilsan" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/teknobims.png" alt="Teknobims" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/stt-turk-gazbeton.png" alt="STT Türk Gazbeton" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/derya-tugla.png" alt="Derya Tuğla" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/beser-toprak.png" alt="Beşer Toprak" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/dalsan.png" alt="Dalsan" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/boardex.png" alt="Boardex" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/knauf.png" alt="Knauf" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/entegre.png" alt="Entegre" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/onduline.png" alt="Onduline" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/izocam.png" alt="İzocam" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/lion-yalitim.png" alt="Lion Yalıtım" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/isonem.png" alt="İsonem" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/baumit.png" alt="Baumit" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/kalekim.png" alt="Kalekim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/weber.png" alt="Weber" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno Yapı Kimyasalları" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/fixa.png" alt="Fixa" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/newkim.png" alt="Newkim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/adakim.png" alt="Adakim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/adocim.png" alt="Adaçim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/cimentas.png" alt="Çimentaş" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/filli-boya.png" alt="Filli Boya" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/fawori.png" alt="Fawori" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/marshall.png" alt="Marshall" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/permolit.png" alt="Permolit" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/ytong.png" alt="Ytong" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/kilsan.png" alt="Kilsan" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/teknobims.png" alt="Teknobims" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/stt-turk-gazbeton.png" alt="STT Türk Gazbeton" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/derya-tugla.png" alt="Derya Tuğla" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/beser-toprak.png" alt="Beşer Toprak" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/dalsan.png" alt="Dalsan" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/boardex.png" alt="Boardex" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/knauf.png" alt="Knauf" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/entegre.png" alt="Entegre" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/onduline.png" alt="Onduline" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/izocam.png" alt="İzocam" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/lion-yalitim.png" alt="Lion Yalıtım" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/isonem.png" alt="İsonem" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/baumit.png" alt="Baumit" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/kalekim.png" alt="Kalekim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/weber.png" alt="Weber" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno Yapı Kimyasalları" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/fixa.png" alt="Fixa" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/newkim.png" alt="Newkim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/adakim.png" alt="Adakim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/adocim.png" alt="Adaçim" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/cimentas.png" alt="Çimentaş" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/filli-boya.png" alt="Filli Boya" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/fawori.png" alt="Fawori" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/marshall.png" alt="Marshall" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="h-10 md:h-12 w-auto" loading="lazy">
-          <img src="img/markalar/permolit.png" alt="Permolit" class="h-10 md:h-12 w-auto" loading="lazy">
+          <img src="img/markalar/ytong.png" alt="Ytong" width="382" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/kilsan.png" alt="Kilsan" width="364" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/teknobims.png" alt="Teknobims" width="260" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/stt-turk-gazbeton.png" alt="STT Türk Gazbeton" width="394" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/derya-tugla.png" alt="Derya Tuğla" width="296" height="88" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/beser-toprak.png" alt="Beşer Toprak" width="240" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/dalsan.png" alt="Dalsan" width="186" height="63" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/boardex.png" alt="Boardex" width="350" height="100" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" width="156" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/knauf.png" alt="Knauf" width="212" height="134" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/entegre.png" alt="Entegre" width="280" height="103" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/onduline.png" alt="Onduline" width="444" height="108" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/izocam.png" alt="İzocam" width="246" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/lion-yalitim.png" alt="Lion Yalıtım" width="262" height="120" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/bonus-yalitim.png" alt="Bonus" width="160" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/isonem.png" alt="İsonem" width="263" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/baumit.png" alt="Baumit" width="413" height="128" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/kalekim.png" alt="Kalekim" width="297" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/weber.png" alt="Weber" width="236" height="78" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno Yapı Kimyasalları" width="480" height="148" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/fixa.png" alt="Fixa" width="426" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/newkim.png" alt="Newkim" width="480" height="120" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/adakim.png" alt="Adakim" width="480" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/adocim.png" alt="Adaçim" width="233" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/cimentas.png" alt="Çimentaş" width="258" height="88" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/nippon-paint.png" alt="Nippon Paint" width="358" height="112" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/filli-boya.png" alt="Filli Boya" width="228" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/fawori.png" alt="Fawori" width="160" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/marshall.png" alt="Marshall" width="272" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" width="376" height="134" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/permolit.png" alt="Permolit" width="296" height="62" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/ytong.png" alt="Ytong" width="382" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/kilsan.png" alt="Kilsan" width="364" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/teknobims.png" alt="Teknobims" width="260" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/stt-turk-gazbeton.png" alt="STT Türk Gazbeton" width="394" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/derya-tugla.png" alt="Derya Tuğla" width="296" height="88" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/beser-toprak.png" alt="Beşer Toprak" width="240" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/dalsan.png" alt="Dalsan" width="186" height="63" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/boardex.png" alt="Boardex" width="350" height="100" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" width="156" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/knauf.png" alt="Knauf" width="212" height="134" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/entegre.png" alt="Entegre" width="280" height="103" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/onduline.png" alt="Onduline" width="444" height="108" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/izocam.png" alt="İzocam" width="246" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/lion-yalitim.png" alt="Lion Yalıtım" width="262" height="120" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/bonus-yalitim.png" alt="Bonus" width="160" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/isonem.png" alt="İsonem" width="263" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/baumit.png" alt="Baumit" width="413" height="128" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/kalekim.png" alt="Kalekim" width="297" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/weber.png" alt="Weber" width="236" height="78" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno Yapı Kimyasalları" width="480" height="148" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/fixa.png" alt="Fixa" width="426" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/newkim.png" alt="Newkim" width="480" height="120" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/adakim.png" alt="Adakim" width="480" height="136" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/adocim.png" alt="Adaçim" width="233" height="72" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/cimentas.png" alt="Çimentaş" width="258" height="88" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/nippon-paint.png" alt="Nippon Paint" width="358" height="112" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/filli-boya.png" alt="Filli Boya" width="228" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/fawori.png" alt="Fawori" width="160" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/marshall.png" alt="Marshall" width="272" height="160" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" width="376" height="134" class="h-10 md:h-12 w-auto mx-7 shrink-0">
+          <img src="img/markalar/permolit.png" alt="Permolit" width="296" height="62" class="h-10 md:h-12 w-auto mx-7 shrink-0">
         </div>
       </div>
 
@@ -1016,9 +1016,9 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Ytong"><img src="img/markalar/ytong.png" alt="Ytong" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="STT"><img src="img/markalar/stt-turk-gazbeton.png" alt="STT" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Teknobims"><img src="img/markalar/teknobims.png" alt="Teknobims" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Ytong"><img src="img/markalar/ytong.png" alt="Ytong" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="STT"><img src="img/markalar/stt-turk-gazbeton.png" alt="STT" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Teknobims"><img src="img/markalar/teknobims.png" alt="Teknobims" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1068,10 +1068,10 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Kilsan"><img src="img/markalar/kilsan.png" alt="Kilsan" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Derya"><img src="img/markalar/derya-tugla.png" alt="Derya" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Beşer"><img src="img/markalar/beser-toprak.png" alt="Beşer" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Teknobims"><img src="img/markalar/teknobims.png" alt="Teknobims" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Kilsan"><img src="img/markalar/kilsan.png" alt="Kilsan" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Derya"><img src="img/markalar/derya-tugla.png" alt="Derya" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Beşer"><img src="img/markalar/beser-toprak.png" alt="Beşer" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Teknobims"><img src="img/markalar/teknobims.png" alt="Teknobims" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1119,11 +1119,11 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalsan"><img src="img/markalar/dalsan.png" alt="Dalsan" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Boardex"><img src="img/markalar/boardex.png" alt="Boardex" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="ABS Alçı"><img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Knauf"><img src="img/markalar/knauf.png" alt="Knauf" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Entegre"><img src="img/markalar/entegre.png" alt="Entegre" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalsan"><img src="img/markalar/dalsan.png" alt="Dalsan" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Boardex"><img src="img/markalar/boardex.png" alt="Boardex" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="ABS Alçı"><img src="img/markalar/abs-alci-plaka.png" alt="ABS Alçı" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Knauf"><img src="img/markalar/knauf.png" alt="Knauf" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Entegre"><img src="img/markalar/entegre.png" alt="Entegre" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Atışkan Alçı</div>
             </div>
           </div>
@@ -1172,12 +1172,12 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Onduline"><img src="img/markalar/onduline.png" alt="Onduline" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İsonem"><img src="img/markalar/isonem.png" alt="İsonem" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Onduline"><img src="img/markalar/onduline.png" alt="Onduline" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İsonem"><img src="img/markalar/isonem.png" alt="İsonem" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Ravago</div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fixa"><img src="img/markalar/fixa.png" alt="Fixa" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Newkim"><img src="img/markalar/newkim.png" alt="Newkim" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Bonus"><img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fixa"><img src="img/markalar/fixa.png" alt="Fixa" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Newkim"><img src="img/markalar/newkim.png" alt="Newkim" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Bonus"><img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1225,12 +1225,12 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İzocam"><img src="img/markalar/izocam.png" alt="İzocam" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İzocam"><img src="img/markalar/izocam.png" alt="İzocam" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Ravago</div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Knauf"><img src="img/markalar/knauf.png" alt="Knauf" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Baumit"><img src="img/markalar/baumit.png" alt="Baumit" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Knauf"><img src="img/markalar/knauf.png" alt="Knauf" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Baumit"><img src="img/markalar/baumit.png" alt="Baumit" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Expert</div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Lion"><img src="img/markalar/lion-yalitim.png" alt="Lion" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Lion"><img src="img/markalar/lion-yalitim.png" alt="Lion" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1318,19 +1318,19 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Kalekim"><img src="img/markalar/kalekim.png" alt="Kalekim" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Weber"><img src="img/markalar/weber.png" alt="Weber" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Tekno"><img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Bonus"><img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fixa"><img src="img/markalar/fixa.png" alt="Fixa" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Newkim"><img src="img/markalar/newkim.png" alt="Newkim" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Adakim"><img src="img/markalar/adakim.png" alt="Adakim" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İsonem"><img src="img/markalar/isonem.png" alt="İsonem" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Kalekim"><img src="img/markalar/kalekim.png" alt="Kalekim" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Weber"><img src="img/markalar/weber.png" alt="Weber" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Tekno"><img src="img/markalar/tekno-yapi-kimyasallari.png" alt="Tekno" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Bonus"><img src="img/markalar/bonus-yalitim.png" alt="Bonus" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fixa"><img src="img/markalar/fixa.png" alt="Fixa" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Newkim"><img src="img/markalar/newkim.png" alt="Newkim" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Adakim"><img src="img/markalar/adakim.png" alt="Adakim" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="İsonem"><img src="img/markalar/isonem.png" alt="İsonem" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Optimix</div>
               <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Expert</div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Lion"><img src="img/markalar/lion-yalitim.png" alt="Lion" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Baumit"><img src="img/markalar/baumit.png" alt="Baumit" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Entegre"><img src="img/markalar/entegre.png" alt="Entegre" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Lion"><img src="img/markalar/lion-yalitim.png" alt="Lion" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Baumit"><img src="img/markalar/baumit.png" alt="Baumit" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Entegre"><img src="img/markalar/entegre.png" alt="Entegre" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1380,8 +1380,8 @@
           <div class="lg:col-span-1 reveal-on-scroll fade-right">
             <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
             <div class="grid grid-cols-2 gap-3">
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Adaçim"><img src="img/markalar/adocim.png" alt="Adaçim" class="max-h-10 w-auto" loading="lazy"></div>
-              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Çimentaş"><img src="img/markalar/cimentas.png" alt="Çimentaş" class="max-h-10 w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Adaçim"><img src="img/markalar/adocim.png" alt="Adaçim" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+              <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Çimentaş"><img src="img/markalar/cimentas.png" alt="Çimentaş" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             </div>
           </div>
           <div class="lg:col-span-2 reveal-on-scroll fade-left delay-100">
@@ -1429,12 +1429,12 @@
         <div class="reveal-on-scroll fade-up">
           <h2 class="font-display text-xl font-bold text-navy-900 mb-5 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold-500"></i> Markalar</h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Nippon Paint"><img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="max-h-10 w-auto" loading="lazy"></div>
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Filli Boya"><img src="img/markalar/filli-boya.png" alt="Filli Boya" class="max-h-10 w-auto" loading="lazy"></div>
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fawori"><img src="img/markalar/fawori.png" alt="Fawori" class="max-h-10 w-auto" loading="lazy"></div>
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Marshall"><img src="img/markalar/marshall.png" alt="Marshall" class="max-h-10 w-auto" loading="lazy"></div>
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalmaçyalı"><img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="max-h-10 w-auto" loading="lazy"></div>
-            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Permolit"><img src="img/markalar/permolit.png" alt="Permolit" class="max-h-10 w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Nippon Paint"><img src="img/markalar/nippon-paint.png" alt="Nippon Paint" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Filli Boya"><img src="img/markalar/filli-boya.png" alt="Filli Boya" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Fawori"><img src="img/markalar/fawori.png" alt="Fawori" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Marshall"><img src="img/markalar/marshall.png" alt="Marshall" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Dalmaçyalı"><img src="img/markalar/dalmacyali.png" alt="Dalmaçyalı" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
+            <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200" title="Permolit"><img src="img/markalar/permolit.png" alt="Permolit" class="max-h-10 max-w-full w-auto" loading="lazy"></div>
             <div class="flex items-center justify-center h-20 px-4 rounded-xl bg-white border border-stone-200 text-sm font-bold text-navy-900 text-center">Tempo</div>
           </div>
         </div>
@@ -1712,17 +1712,17 @@
       <div class="py-20 max-w-7xl mx-auto px-6">
         <!-- Referans logoları img/referanslar/ altında (işletme sahibinden) -->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Rams Türkiye"><img src="img/referanslar/rams-turkiye.png" alt="Rams Türkiye" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Ege Yapı"><img src="img/referanslar/egeyapi.png" alt="Ege Yapı" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Torunlar GYO"><img src="img/referanslar/torunlar-gyo.png" alt="Torunlar GYO" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Emlak Konut"><img src="img/referanslar/emlak-konut.png" alt="Emlak Konut" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="TMSF"><img src="img/referanslar/tmsf.png" alt="TMSF" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="TOKİ"><img src="img/referanslar/toki.png" alt="TOKİ" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Kalyon"><img src="img/referanslar/kalyon.png" alt="Kalyon" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Kiptaş"><img src="img/referanslar/kiptas.png" alt="Kiptaş" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Gül İnşaat"><img src="img/referanslar/gul-insaat.png" alt="Gül İnşaat" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Tahincioğlu"><img src="img/referanslar/tahincioglu.png" alt="Tahincioğlu" class="max-h-14 w-auto" loading="lazy"></div>
-          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Consera"><img src="img/referanslar/consera.png" alt="Consera" class="max-h-14 w-auto" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Rams Türkiye"><img src="img/referanslar/rams-turkiye.png" alt="Rams Türkiye" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Ege Yapı"><img src="img/referanslar/egeyapi.png" alt="Ege Yapı" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Torunlar GYO"><img src="img/referanslar/torunlar-gyo.png" alt="Torunlar GYO" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Emlak Konut"><img src="img/referanslar/emlak-konut.png" alt="Emlak Konut" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="TMSF"><img src="img/referanslar/tmsf.png" alt="TMSF" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="TOKİ"><img src="img/referanslar/toki.png" alt="TOKİ" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Kalyon"><img src="img/referanslar/kalyon.png" alt="Kalyon" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Kiptaş"><img src="img/referanslar/kiptas.png" alt="Kiptaş" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-300 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Gül İnşaat"><img src="img/referanslar/gul-insaat.png" alt="Gül İnşaat" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-100 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Tahincioğlu"><img src="img/referanslar/tahincioglu.png" alt="Tahincioğlu" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
+          <div class="reveal-on-scroll fade-up delay-200 flex items-center justify-center min-h-[120px] p-6 rounded-2xl border border-stone-200 bg-white hover:shadow-lg hover:border-gold-300 transition-all duration-300" title="Consera"><img src="img/referanslar/consera.png" alt="Consera" class="h-16 md:h-20 w-auto max-w-[78%] object-contain" loading="lazy"></div>
         </div>
 
         <div class="mt-14 p-8 rounded-2xl bg-navy-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 reveal-on-scroll fade-up">
