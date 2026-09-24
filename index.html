@@ -2695,9 +2695,13 @@
           urunler.length + ' ürün · Görsel ve bilgiler üretici kataloğundan alınmıştır. Stok, ölçü ve fiyat için bize ulaşın.';
         document.getElementById('marka-urunler').innerHTML = urunler.map(u => `
             <article class="reveal-on-scroll fade-up overflow-hidden rounded-2xl border border-stone-200 bg-white hover:shadow-xl hover:border-gold-300 transition-all duration-300 flex flex-col">
-              ${u.gorsel ? `<div class="aspect-[4/3] bg-[#f8f7f4] flex items-center justify-center overflow-hidden">
+              ${u.gorsel
+                ? `<div class="aspect-[4/3] bg-[#f8f7f4] flex items-center justify-center overflow-hidden">
                 <img src="img/urunler/${slug}/${u.gorsel}" alt="${u.ad}" class="w-full h-full object-contain p-3" loading="lazy">
-              </div>` : ``}
+              </div>`
+                : `<div class="aspect-[4/3] bg-gradient-to-br from-[#f8f7f4] to-stone-100 border-b border-stone-200 flex items-center justify-center p-8" aria-hidden="true">
+                <img src="img/markalar/${m.logo}.png" alt="" class="max-h-12 max-w-[60%] w-auto opacity-30 grayscale" loading="lazy">
+              </div>`}
               <div class="p-6 flex flex-col flex-grow">
                 <h3 class="font-display font-bold text-navy-900">${u.ad}</h3>
                 <p class="mt-2 text-sm text-stone-600 leading-relaxed flex-grow">${u.aciklama}</p>
