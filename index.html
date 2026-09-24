@@ -2472,23 +2472,198 @@
           { ad: 'Fawori Plastik Antibakteriyel', aciklama: 'Mat görünümlü, antibakteriyel, ekonomi ve kaliteyi bir arada sunan iç cephe boyası.' }
         ]
       },
-      'stt':        { ad: 'STT Türk Gazbeton', logo: 'stt-turk-gazbeton', kat: 'urun-gazbeton', katAd: 'Gazbeton & Duvar Blokları', tkl: 'Gazbeton', ozet: 'Gazbeton duvar blokları ve yapı elemanları.', urunler: [] },
-      'derya':      { ad: 'Derya Tuğla', logo: 'derya-tugla', kat: 'urun-tugla', katAd: 'Tuğla & Bims', tkl: 'Tuğla', ozet: 'Doğalgazlı tuğla ve duvar örgü malzemeleri.', urunler: [] },
-      'beser':      { ad: 'Beşer Toprak', logo: 'beser-toprak', kat: 'urun-tugla', katAd: 'Tuğla & Bims', tkl: 'Tuğla', ozet: 'Toprak sanayi ürünleri; tuğla ve duvar elemanları.', urunler: [] },
-      'atiskan':    { ad: 'Atışkan Alçı', logo: 'atiskan-alci', kat: 'urun-alci', katAd: 'Alçı & Alçı Levhalar', tkl: 'Hazır Sıva / Alçı', ozet: 'Sıva ve saten alçı ürünleri.', urunler: [] },
-      'isonem':     { ad: 'İsonem', logo: 'isonem', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı', ozet: 'Sürme su yalıtım malzemeleri ve yalıtım boyaları.', urunler: [] },
-      'newkim':     { ad: 'Newkim', logo: 'newkim', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı', ozet: 'Su yalıtımı ve yapı kimyasalları ürünleri.', urunler: [] },
-      'bonus':      { ad: 'Bonus', logo: 'bonus-yalitim', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı', ozet: 'Su yalıtımı ve yapı kimyasalları.', urunler: [] },
-      'lion':       { ad: 'Lion Yalıtım', logo: 'lion-yalitim', kat: 'urun-isi', katAd: 'Isı & Ses Yalıtımı', tkl: 'Yalıtım', ozet: 'Isı yalıtım sistemleri ve tamamlayıcı ürünler.', urunler: [] },
-      'dalmacyali': { ad: 'Dalmaçyalı', logo: 'dalmacyali', kat: 'urun-isi', katAd: 'Isı & Ses Yalıtımı', tkl: 'Yalıtım', ozet: 'İleri ısı yalıtım sistemleri ve mantolama ürünleri.', urunler: [] },
-      'kalekim':    { ad: 'Kalekim', logo: 'kalekim', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları', ozet: 'Seramik yapıştırıcıları, derz dolguları, tamir harçları ve su yalıtım ürünleri.', urunler: [] },
-      'fixa':       { ad: 'Fixa', logo: 'fixa', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları', ozet: 'Yapı kimyasalları; yapıştırıcı, derz, tamir ve yalıtım ürünleri.', urunler: [] },
-      'adakim':     { ad: 'Adakim', logo: 'adakim', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları', ozet: 'Yapı kimyasalları ve harç ürünleri.', urunler: [] },
-      'adocim':     { ad: 'Adaçim', logo: 'adocim', kat: 'urun-cimento', katAd: 'Çimento & Agregalar', tkl: 'Çimento', ozet: 'Torbalı Portland ve kompoze çimento çeşitleri.', urunler: [] },
-      'cimentas':   { ad: 'Çimentaş', logo: 'cimentas', kat: 'urun-cimento', katAd: 'Çimento & Agregalar', tkl: 'Çimento', ozet: 'Cementir Holding bünyesinde torbalı ve dökme çimento.', urunler: [] },
-      'filli-boya': { ad: 'Filli Boya', logo: 'filli-boya', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya', ozet: 'İç ve dış cephe boyaları, astar ve dekoratif ürünler.', urunler: [] },
-      'marshall':   { ad: 'Marshall', logo: 'marshall', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya', ozet: 'İç ve dış cephe boyaları, astar ve yardımcı ürünler.', urunler: [] },
-      'permolit':   { ad: 'Permolit', logo: 'permolit', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya', ozet: 'İç ve dış cephe boyaları ve yüzey hazırlık ürünleri.', urunler: [] }
+      'stt': {
+        ad: 'STT Türk Gazbeton', logo: 'stt-turk-gazbeton', kat: 'urun-gazbeton', katAd: 'Gazbeton & Duvar Blokları', tkl: 'Gazbeton',
+        ozet: 'Otoklavlanmış hafif beton (gazbeton) blok ve donatılı panel üreticisi. A1 sınıfı yanmaz malzeme; blok ürünler ile duvar, çatı ve döşeme panelleri.',
+        urunler: [
+          { ad: 'Düz Duvar Blokları', aciklama: 'Standart yüzeyli gazbeton duvar blokları. Taşıyıcı ve taşıyıcı olmayan duvarlarda, ince derz örgü tutkalıyla uygulanır.' },
+          { ad: 'Geçmeli Duvar Blokları', aciklama: 'Yanları geçmeli (lamba-zıvana) gazbeton bloklar. Düşey derzde harç gerektirmez, örgü hızını artırır.' },
+          { ad: 'Hafif Boşluklu Blok ve U Blok', aciklama: 'Hafifletilmiş boşluklu bloklar ve hatıl/kolon dökümünde kalıp olarak kullanılan U kesitli bloklar.' },
+          { ad: 'Yalıtım Levhası', aciklama: 'Gazbeton esaslı mineral ısı yalıtım levhası; iç ve dış cephede yanmaz yalıtım katmanı oluşturur.' },
+          { ad: 'Düşey ve Yatay Duvar Panelleri', aciklama: 'Donatılı büyük ebatlı duvar panelleri. EN 12602 standardına göre üretilir; hızlı montajla bölme ve dış duvar kurulur.' },
+          { ad: 'Çatı ve Döşeme Panelleri', aciklama: 'Taşıyıcı donatılı gazbeton çatı ve döşeme panelleri; yalıtım ile taşıyıcılığı tek katmanda birleştirir.' },
+          { ad: 'Lento', aciklama: 'Kapı ve pencere boşluklarını geçmek için donatılı gazbeton lento (EN 845-2).' }
+        ]
+      },
+      'derya': {
+        ad: 'Derya Tuğla', logo: 'derya-tugla', kat: 'urun-tugla', katAd: 'Tuğla & Bims', tkl: 'Tuğla',
+        ozet: 'Doğalgaz fırınlarında üretilen tuğla çeşitleri. İç ve dış duvarlar, bölme duvarlar ve bahçe duvarlarında kullanılan yüksek dayanımlı tuğlalar.',
+        urunler: [
+          { ad: '13,5 Duvar Tuğlası', aciklama: 'İç ve dış duvarlarda yaygın kullanılan delikli duvar tuğlası.' },
+          { ad: 'İzo Tuğla', aciklama: 'Isı yalıtım performansı artırılmış tuğla serisi; tek katmanda daha yüksek yalıtım sağlar.' },
+          { ad: 'Termo Tuğla', aciklama: 'Özel gözenek yapısıyla ısı iletimini düşüren termal tuğla.' },
+          { ad: 'Tek Delikli Baca Tuğlası', aciklama: 'Baca şaftlarının örülmesinde kullanılan tek delikli tuğla.' },
+          { ad: 'Yığma Tuğla', aciklama: 'Yığma yapı sistemlerinde taşıyıcı duvar örgüsü için tuğla.' }
+        ]
+      },
+      'beser': {
+        ad: 'Beşer Toprak', logo: 'beser-toprak', kat: 'urun-tugla', katAd: 'Tuğla & Bims', tkl: 'Tuğla',
+        ozet: 'Tekirdağ merkezli tuğla üreticisi. Kil vakum ekstrüzyon yöntemiyle üretilen duvar, asmolen, izolasyon ve baca tuğlaları.',
+        urunler: [
+          { ad: 'Duvar Tuğlası', aciklama: 'İç ve dış duvar örgüsünde kullanılan delikli tuğla çeşitleri.' },
+          { ad: 'Asmolen Tuğla', aciklama: 'Asmolen döşemelerde kullanılan tuğla. Kil vakum ekstrüzyon yöntemiyle üretildiği için ses ve ısı yalıtım değerleri yüksektir. 20\'lik asmolen, iç bölme duvarlarda ve iki tuğla arasına yalıtım konan sandviç duvarlarda da kullanılır.' },
+          { ad: 'İzolasyon Tuğlası', aciklama: 'Isı yalıtımı güçlendirilmiş tuğla; dış duvarlarda enerji kaybını azaltır.' },
+          { ad: 'Baca Tuğlası', aciklama: 'Baca kanallarının örülmesi için özel kesitli tuğla.' }
+        ]
+      },
+      'atiskan': {
+        ad: 'Atışkan Alçı', logo: 'atiskan-alci', kat: 'urun-alci', katAd: 'Alçı & Alçı Levhalar', tkl: 'Hazır Sıva / Alçı',
+        ozet: 'Sıva, saten, derz dolgu ve plaka yapıştırma alçıları. İç mekân duvar ve tavan yüzeyleri için alçı bazlı çözümler.',
+        urunler: [
+          { ad: 'Makine Sıva Alçısı', aciklama: 'İç mekânlarda duvar ve tavanlara 10-30 mm kalınlıkta makineyle uygulanan perlitli alçı sıva harcı. Tek katta boyaya hazır, pürüzsüz yüzey verir; işçilikten ve zamandan tasarruf sağlar. 35 kg.' },
+          { ad: 'Sıva Alçısı', aciklama: 'İç mekânlarda duvar ve tavanlara 5-20 mm kalınlıkta el ile uygulanan perlitli alçı sıva harcı. 35 kg.' },
+          { ad: 'Saten Alçı', aciklama: 'Brüt beton, gazbeton, kara sıva, alçı sıva, alçı plaka veya boyalı yüzeylere uygulanabilen, uygulama süresi uzatılmış yüzey düzeltme alçısı. Düzgün, pürüzsüz ve ipeksi bir yüzey sağlar. 25 kg.' },
+          { ad: 'Derz Dolgu Alçısı', aciklama: 'Alçı levha eklerinin doldurulması ve bantlanması için derz dolgu alçısı.' },
+          { ad: 'Plaka Yapıştırma Alçısı', aciklama: 'Alçı levhaların duvara doğrudan yapıştırılmasında kullanılan alçı esaslı yapıştırıcı.' },
+          { ad: 'Kartonpiyer Alçısı', aciklama: 'Kartonpiyer ve dekoratif alçı elemanların üretimi ve montajı için alçı.' }
+        ]
+      },
+      'isonem': {
+        ad: 'İsonem', logo: 'isonem', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı',
+        ozet: 'Sürme (likit) su yalıtım malzemeleri ve özel boyalar. Çatı, teras, ıslak hacim ve cephe yalıtımında eksiz kaplama oluşturan ürünler.',
+        urunler: [
+          { ad: 'SB Mineral Dolgulu Su Yalıtımı', aciklama: 'Özel mineral dolgu ve polimer bileşenlerden oluşan, güçlü yapışma ile yüksek su ve UV dayanımı sağlayan yalıtım kaplaması. Üzerinde yürünen beton çatı, teras ve yürüme yollarında kullanılır.' },
+          { ad: 'BE 89 Likit Kauçuk Su Yalıtımı', aciklama: 'Kauçuk modifiyeli likit bitüm esaslı kaplama. Kuruduktan sonra yüzeyde yüksek elastikiyete sahip su geçirmez bir katman oluşturur.' },
+          { ad: 'MS Polymer Elastik Su Yalıtımı', aciklama: 'Saf polimer esaslı, UV dayanımlı, parlak ve yüksek elastik yapıda kullanıma hazır su yalıtım malzemesi.' },
+          { ad: 'DF 9 Islak Hacim Su Yalıtımı', aciklama: 'Akrilik polimer esaslı su yalıtım malzemesi; banyo, mutfak ve balkon gibi ıslak hacimlerde seramik altına uygulanır.' },
+          { ad: 'Yangına Dayanıklı Boya', aciklama: 'Su bazlı, şişen (intumescent) yapıda yangın geciktirici boya. Çelik, ahşap ve beton taşıyıcıların yangın dayanımını artırmak için kullanılır.' }
+        ]
+      },
+      'newkim': {
+        ad: 'Newkim', logo: 'newkim', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı',
+        ozet: 'Su yalıtımı, yapıştırıcı, derz ve ısı yalıtım ürünlerinden oluşan geniş yapı kimyasalları yelpazesi.',
+        urunler: [
+          { ad: 'Su Yalıtım Ürünleri', aciklama: 'Likit su yalıtım grupları ve bitümlü su yalıtım örtüleri; temel, teras ve çatı uygulamaları için.' },
+          { ad: 'Yapıştırma Harçları', aciklama: 'Seramik ve granit kaplamalar için çimento esaslı yapıştırma harçları.' },
+          { ad: 'Derz Dolguları', aciklama: 'Seramik derzlerinin doldurulması için çimento esaslı derz dolgu ürünleri.' },
+          { ad: 'Isı Yalıtım Sistemleri ve Sıvaları', aciklama: 'Dış cephe mantolama ürünleri ile yalıtım sıvaları.' },
+          { ad: 'Tamir ve Zemin Sistemleri', aciklama: 'Yüzey tamir harçları ve zemin uygulama ürünleri.' },
+          { ad: 'Astar ve Teknik Sıvılar', aciklama: 'Yüzey hazırlığı için astarlar ve teknik sıvı ürün grubu.' },
+          { ad: 'İç ve Dış Cephe Boyaları', aciklama: 'Cephe boyaları ve endüstriyel boya grubu.' }
+        ]
+      },
+      'bonus': {
+        ad: 'Bonus', logo: 'bonus-yalitim', kat: 'urun-cati', katAd: 'Çatı & Su Yalıtımı', tkl: 'Çatı / Su Yalıtımı',
+        ozet: 'Yapının her aşaması için ısı, su, ses ve yangın yalıtımı ürünleri. Bitümlü membranlar, XPS levhalar ve taş yünü çözümleri.',
+        urunler: [
+          { ad: 'Bitümlü Su Yalıtım Membranı', aciklama: 'Temel, perde, bodrum, bahçe, teras ve çatılarda kullanılan bitümlü su yalıtım örtüsü. Köprü ve viyadük gibi ağır yük alan yapılarda da tercih edilir.' },
+          { ad: 'Membran Plus', aciklama: 'APP katkılı modifiye bitümden üretilen plastomerik su yalıtım örtüsü; cam tülü ve polyester keçe taşıyıcılı tipleri mevcuttur.' },
+          { ad: 'Ultrabond Arduvazlı Membran', aciklama: 'Elastomerik bitüm (SBS) ve TPU takviyeli formülüyle yüksek performanslı su yalıtım örtüsü. Çatı, teras, otopark ve üzerinde yürünen alanlar için uygundur.' },
+          { ad: 'XPS Isı Yalıtım Levhası', aciklama: 'Homojen hücre yapısına sahip ekstrüde polistiren levha; temel, teras ve döşeme altı yalıtımında kullanılır.' },
+          { ad: 'Taş Yünü', aciklama: 'Bazalt gibi volkanik kayaçların yüksek sıcaklıkta eritilip lif hâline getirilmesiyle üretilen ısı, ses ve yangın yalıtım malzemesi.' }
+        ]
+      },
+      'lion': {
+        ad: 'Lion Yalıtım', logo: 'lion-yalitim', kat: 'urun-isi', katAd: 'Isı & Ses Yalıtımı', tkl: 'Yalıtım',
+        ozet: 'Isı yalıtım (mantolama) sistemleri ve tamamlayıcı ürünler.',
+        urunler: [
+          { ad: 'EPS Isı Yalıtım Levhası', aciklama: 'Dış cephe mantolamasında kullanılan genleştirilmiş polistiren levha.' },
+          { ad: 'Mantolama Sistem Bileşenleri', aciklama: 'Yalıtım levhasının yanında sistemi tamamlayan yapıştırma harcı, sıva, donatı filesi ve dübel grubu.' }
+        ]
+      },
+      'dalmacyali': {
+        ad: 'Dalmaçyalı', logo: 'dalmacyali', kat: 'urun-isi', katAd: 'Isı & Ses Yalıtımı', tkl: 'Yalıtım',
+        ozet: 'İleri ısı yalıtım sistemleri. Karbon takviyeli EPS levhalar ve komple mantolama paket sistemleri.',
+        urunler: [
+          { ad: 'Karbonlu EPS Isı Yalıtım Levhası', aciklama: 'Yeni nesil hammaddelerle ideal karbon dengesine sahip polistiren esaslı yalıtım levhası. İçeriğindeki grafit sayesinde ısının ışıma yoluyla yayılmasını engeller, standart EPS\'ye göre daha iyi yalıtım sağlar (λD: 0,034 W/mK).' },
+          { ad: 'EPS Isı Yalıtım Levhası', aciklama: 'Dış cephe mantolamasında kullanılan genleştirilmiş polistiren ısı yalıtım levhası.' },
+          { ad: 'Mantolama Paket Sistemleri', aciklama: 'Yalıtım levhası, yapıştırma harcı, dübel, donatı filesi, sıva ve kaplamadan oluşan komple sistem. Sistem olarak uygulandığında performans ve garanti bütünlüğü sağlar.' },
+          { ad: 'Yapıştırma ve Sıva Harçları', aciklama: 'Yalıtım levhasının yapıştırılması ve üzerinin sıvanması için sistem harçları.' }
+        ]
+      },
+      'kalekim': {
+        ad: 'Kalekim', logo: 'kalekim', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları',
+        ozet: 'Seramik uygulamaları, su yalıtımı, ısı yalıtımı, zemin ve teknik kimyasallardan oluşan altı ana ürün grubu.',
+        urunler: [
+          { ad: 'Seramik ve Granit Yapıştırıcıları', aciklama: 'Çimento esaslı yapıştırma harçları; standart (C1) sınıftan yüksek performanslı flex (C2TE / C2TES1) sınıfa kadar. Büyük boy porselen ve granit seramik için kaymayı azaltan, açık kalma süresi uzatılmış tipleri mevcuttur.' },
+          { ad: 'Derz Dolguları', aciklama: 'Seramik derzleri için çimento esaslı dolgular; silikon takviyeli, tozumayan ve esnek tipleriyle 2-20 mm derz aralıklarına uygun seçenekler.' },
+          { ad: 'Epoksi Yapıştırıcı ve Derz', aciklama: 'Kimyasal dayanım ve hijyen gereken alanlarda kullanılan epoksi esaslı yapıştırıcı ve derz dolgu ürünleri.' },
+          { ad: 'Su Yalıtım Uygulamaları', aciklama: 'Banyo, mutfak, havuz, balkon, teras ve bodrum için sürme su yalıtım harçları ve tamamlayıcı ürünler.' },
+          { ad: 'Isı Yalıtım (Mantolama) Sistemleri', aciklama: 'Karbonlu EPS levhalar, yapıştırma ve sıva harçları, donatı filesi ve dübellerden oluşan dış cephe yalıtım sistemleri.' },
+          { ad: 'Zemin Uygulamaları', aciklama: 'Şap, kendiliğinden yayılan zemin harçları ve zemin hazırlık ürünleri.' },
+          { ad: 'Boya ve Dekoratif Kaplamalar', aciklama: 'Dış cephe kaplamaları ve dekoratif yüzey ürünleri.' }
+        ]
+      },
+      'fixa': {
+        ad: 'Fixa', logo: 'fixa', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları',
+        ozet: 'Su yalıtımından zemin sistemlerine, yapıştırıcılardan beton katkılarına kadar geniş yapı kimyasalları yelpazesi.',
+        urunler: [
+          { ad: 'Seramik ve Karo Yapıştırıcıları', aciklama: 'Çimento esaslı standart ve flex yapıştırıcılar; büyük boy granit seramik için beyaz ve gri seçenekler. Özel yüzeylerde akrilik esaslı kullanıma hazır ve epoksi esaslı tipler.' },
+          { ad: 'Derz Dolguları', aciklama: 'Çimento esaslı esnek derz dolguları ve yüksek kimyasal dayanım gereken yerler için epoksi esaslı derz ürünleri.' },
+          { ad: 'Su Yalıtım Sistemleri', aciklama: 'Temel, perde, teras ve ıslak hacimler için sürme ve kristalize su yalıtım ürünleri.' },
+          { ad: 'Sızdırmazlık Ürünleri', aciklama: 'Derz ve birleşim yerlerinin sızdırmazlığı için mastik ve bant grubu.' },
+          { ad: 'Tamir, Güçlendirme ve Restorasyon', aciklama: 'Beton yüzey tamir harçları, güçlendirme ve restorasyon ürünleri.' },
+          { ad: 'Zemin Sistemleri', aciklama: 'Şap, kendiliğinden yayılan zemin harçları ve zemin sertleştiriciler.' },
+          { ad: 'Isı Yalıtım Sistemleri', aciklama: 'Mantolama yapıştırıcı ve sıvaları ile sistem bileşenleri.' },
+          { ad: 'Çimento Esaslı Sıva ve Yapıştırma Harçları', aciklama: 'İç ve dış cephe sıvaları ile gazbeton-tuğla örgü harçları.' },
+          { ad: 'Beton ve Harç Katkıları', aciklama: 'Priz düzenleyici, akışkanlaştırıcı ve su geçirimsizlik katkıları; kalıp ayırıcı ve kür malzemeleri.' }
+        ]
+      },
+      'adakim': {
+        ad: 'Adakim', logo: 'adakim', kat: 'urun-kimyasal', katAd: 'Yapı Kimyasalları', tkl: 'Yapı Kimyasalları',
+        ozet: 'Yapı kimyasalları, cephe boyaları, ısı yalıtımı ve su yalıtım örtülerinden oluşan ürün grubu.',
+        urunler: [
+          { ad: 'Yapıştırma Harçları', aciklama: 'Seramik ve granit kaplamalar için çimento esaslı yapıştırıcılar.' },
+          { ad: 'Derz Dolguları', aciklama: 'Seramik derzleri için dolgu ürünleri.' },
+          { ad: 'Su Yalıtım Çözümleri ve Membranlar', aciklama: 'Sürme su yalıtım ürünleri ve bitümlü su yalıtım örtüleri.' },
+          { ad: 'Isı Yalıtım Çözümleri', aciklama: 'Dış cephe mantolama ürünleri ve sistem bileşenleri.' },
+          { ad: 'Tamir ve Zemin Çözümleri', aciklama: 'Yüzey tamir harçları ve zemin uygulama ürünleri.' },
+          { ad: 'İç ve Dış Cephe Boyaları', aciklama: 'Cephe boyaları ile endüstriyel boya grubu.' }
+        ]
+      },
+      'adocim': {
+        ad: 'Adaçim', logo: 'adocim', kat: 'urun-cimento', katAd: 'Çimento & Agregalar', tkl: 'Çimento',
+        ozet: 'Torbalı ve dökme çimento üreticisi. Portland ve Portland kompoze çimento tipleri.',
+        urunler: [
+          { ad: 'CEM I Portland Çimento', aciklama: 'Portland çimento klinkeri ve alçıtaşından oluşur. Yüksek klinker oranı sayesinde hızlı dayanım kazanır; genel amaçlı kullanıma uygundur.' },
+          { ad: 'CEM II Portland Kompoze Çimento', aciklama: 'Klinker yanında kalker veya puzolan gibi katkılar içeren çimento. Harç, sıva ve genel beton işlerinde yaygın kullanılır.' },
+          { ad: 'Torbalı ve Dökme Teslimat', aciklama: '50 kg torba, big bag ve dökme olarak temin edilebilir; şantiyeye forkliftli indirme ile teslim.' }
+        ]
+      },
+      'cimentas': {
+        ad: 'Çimentaş', logo: 'cimentas', kat: 'urun-cimento', katAd: 'Çimento & Agregalar', tkl: 'Çimento',
+        ozet: 'Cementir Holding bünyesinde çimento, hazır beton ve agrega üreticisi.',
+        urunler: [
+          { ad: 'CEM II A-W 42,5 R', aciklama: 'Portland kompoze çimento. Genel yapı işleri, harç ve beton uygulamalarında kullanılır.' },
+          { ad: 'CEM II A-M (L-W) 52,5 R', aciklama: 'Yüksek dayanım sınıfında Portland kompoze çimento; erken dayanım gerektiren işler için.' },
+          { ad: 'CEM II A-M (P-L) 42,5 R', aciklama: 'Puzolan ve kalker katkılı Portland kompoze çimento.' },
+          { ad: 'CEM II B-M (L-W) 42,5 R', aciklama: 'Katkı oranı daha yüksek Portland kompoze çimento.' },
+          { ad: 'Agrega', aciklama: 'Beton ve harç üretiminde kullanılan kırmataş ve kum grubu.' }
+        ]
+      },
+      'filli-boya': {
+        ad: 'Filli Boya', logo: 'filli-boya', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya',
+        ozet: 'İç cephe, dış cephe ve tavan boyaları; astar, macun ve dekoratif kaplamalar. Renk danışmanlığı ve renk kartelası desteğiyle.',
+        urunler: [
+          { ad: 'İç Cephe Boyaları', aciklama: 'Silinebilir, mat ve ipek mat iç cephe duvar boyaları. Farklı silinebilirlik ve örtücülük sınıflarında seçenekler.' },
+          { ad: 'Dış Cephe Boyaları', aciklama: 'Silikonlu dış cephe boyaları; su iticilik ve UV dayanımıyla cepheyi hava koşullarına karşı korur.' },
+          { ad: 'Tavan Boyaları', aciklama: 'Tam mat, yüksek örtücülüklü tavan boyaları.' },
+          { ad: 'Astarlar', aciklama: 'İç ve dış cephe astarları; yüzey emiciliğini dengeler, boya sarfiyatını azaltır ve aderansı artırır.' },
+          { ad: 'Macun ve Yüzey Hazırlık Ürünleri', aciklama: 'Saten macun ve dolgu ürünleriyle boya öncesi pürüzsüz yüzey hazırlığı.' },
+          { ad: 'Dekoratif Kaplamalar', aciklama: 'Desenli ve efektli dekoratif iç-dış cephe kaplama ürünleri.' }
+        ]
+      },
+      'marshall': {
+        ad: 'Marshall', logo: 'marshall', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya',
+        ozet: 'İç ve dış cephe boyaları, astar, macun ile ahşap ve metal yüzey ürünleri.',
+        urunler: [
+          { ad: 'İç Cephe Boyaları', aciklama: 'Silinebilir mat ve ipek mat iç cephe duvar boyaları.' },
+          { ad: 'Dış Cephe Boyaları', aciklama: 'Silikon esaslı, su itici ve UV dayanımlı dış cephe boyaları.' },
+          { ad: 'Tavan Boyası', aciklama: 'Mat görünümlü, yüksek örtücülüklü tavan boyası.' },
+          { ad: 'Astar ve Macun', aciklama: 'Yüzey hazırlığı için astarlar ve saten macun ürünleri.' },
+          { ad: 'Ahşap ve Metal Boyaları', aciklama: 'Vernik, sentetik boya ve antipas gibi ahşap-metal yüzey ürünleri.' }
+        ]
+      },
+      'permolit': {
+        ad: 'Permolit', logo: 'permolit', kat: 'urun-boya', katAd: 'Boya', tkl: 'Boya',
+        ozet: 'İç cephe, dış cephe ve yüzey hazırlık ürünlerinden oluşan boya grubu.',
+        urunler: [
+          { ad: 'İç Cephe Boyaları', aciklama: 'Mat ve silinebilir iç cephe duvar boyaları.' },
+          { ad: 'Dış Cephe Boyaları', aciklama: 'Cepheyi hava koşullarına karşı koruyan dış cephe boyaları.' },
+          { ad: 'Tavan Boyası', aciklama: 'Mat görünümlü tavan boyası.' },
+          { ad: 'Astar ve Macun', aciklama: 'Boya öncesi yüzey hazırlığı için astar ve macun ürünleri.' }
+        ]
+      }
     };
 
     // Marka sayfasini bas
